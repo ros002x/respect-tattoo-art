@@ -76,29 +76,27 @@ img {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   min-width: 0;
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.66));
 }
 
-.brand img {
+.brand-mark {
   width: clamp(48px, 4.4vw, 66px);
   height: clamp(48px, 4.4vw, 66px);
   border-radius: 50%;
   object-fit: cover;
+  object-position: center 42%;
   background: #020302;
   box-shadow:
     0 0 0 1px rgba(224, 166, 111, 0.34),
     0 14px 34px rgba(0, 0, 0, 0.58);
 }
 
-.brand span {
-  color: var(--cream);
-  font-size: clamp(0.92rem, 1.25vw, 1.2rem);
-  font-weight: 950;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
+.brand-wordmark {
+  width: clamp(150px, 16vw, 254px);
+  height: auto;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.6));
 }
 
 .site-nav {
@@ -276,6 +274,12 @@ h2 {
 .statement .eyebrow {
   grid-column: 1 / -1;
   margin-bottom: -18px;
+}
+
+.statement h2 {
+  max-width: 920px;
+  font-size: clamp(2.8rem, 5.2vw, 5.9rem);
+  line-height: 0.94;
 }
 
 .statement p:not(.eyebrow),
@@ -482,17 +486,16 @@ textarea:focus {
   }
 
   .brand {
-    gap: 9px;
+    gap: 10px;
   }
 
-  .brand img {
+  .brand-mark {
     width: 46px;
     height: 46px;
   }
 
-  .brand span {
-    max-width: 46vw;
-    font-size: 0.8rem;
+  .brand-wordmark {
+    width: min(42vw, 168px);
   }
 
   .hero {
@@ -521,6 +524,11 @@ textarea:focus {
   .statement,
   .work {
     padding-inline: 20px;
+  }
+
+  .statement h2 {
+    font-size: clamp(2rem, 12vw, 3.9rem);
+    line-height: 0.98;
   }
 
   .booking {
