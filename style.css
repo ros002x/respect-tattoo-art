@@ -262,32 +262,12 @@ h2 {
   backdrop-filter: blur(10px);
 }
 
-.statement {
-  display: grid;
-  grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
-  gap: clamp(34px, 6vw, 92px);
-  align-items: center;
-  padding: clamp(90px, 13vw, 180px) clamp(22px, 7vw, 120px);
-  background: linear-gradient(180deg, rgba(2, 3, 2, 0.12), rgba(2, 3, 2, 0.72));
-}
-
-.statement .eyebrow {
-  grid-column: 1 / -1;
-  margin-bottom: -18px;
-}
-
-.statement h2 {
-  max-width: 760px;
-  font-size: clamp(2.35rem, 4.1vw, 4.9rem);
-  line-height: 1;
-}
-
 .work-head h2,
 .booking-copy h2 {
   line-height: 1;
 }
 
-.statement p:not(.eyebrow),
+.work-head p:not(.eyebrow),
 .booking-copy p {
   max-width: 620px;
   margin: 0;
@@ -303,7 +283,7 @@ h2 {
 .work-head {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: flex-end;
   gap: 28px;
   margin-bottom: clamp(38px, 6vw, 76px);
 }
@@ -311,7 +291,136 @@ h2 {
 .work-head h2 {
   max-width: 640px;
   font-size: clamp(2.2rem, 3.9vw, 4.8rem);
-  text-align: right;
+}
+
+.work-head p:not(.eyebrow) {
+  max-width: 430px;
+  padding-bottom: 8px;
+}
+
+.section-head {
+  max-width: 840px;
+  margin-bottom: clamp(30px, 5vw, 62px);
+}
+
+.section-head h2 {
+  font-size: clamp(2.1rem, 3.9vw, 4.7rem);
+  line-height: 1;
+}
+
+.collaborators,
+.events {
+  padding: clamp(76px, 10vw, 140px) clamp(22px, 7vw, 120px);
+  overflow: hidden;
+}
+
+.collaborators {
+  background:
+    linear-gradient(90deg, rgba(2, 3, 2, 0.92), rgba(7, 23, 15, 0.48), rgba(2, 3, 2, 0.78));
+}
+
+.artist-carousel {
+  margin-inline: calc(clamp(22px, 7vw, 120px) * -1);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.artist-track {
+  display: flex;
+  width: max-content;
+  gap: 18px;
+  animation: artist-scroll 34s linear infinite;
+}
+
+.artist-carousel:hover .artist-track {
+  animation-play-state: paused;
+}
+
+.artist-card {
+  width: clamp(230px, 22vw, 330px);
+  min-height: 190px;
+  display: grid;
+  align-content: end;
+  gap: 10px;
+  padding: 26px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at 30% 18%, rgba(224, 166, 111, 0.18), transparent 34%),
+    linear-gradient(145deg, rgba(12, 14, 10, 0.96), rgba(2, 3, 2, 0.72));
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
+}
+
+.artist-card strong {
+  color: var(--cream);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.artist-card a,
+.artist-card span:not(.artist-role) {
+  color: var(--soft);
+  font-size: 0.94rem;
+}
+
+.artist-role {
+  color: var(--copper-soft);
+  font-size: 0.74rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.events {
+  background: linear-gradient(180deg, rgba(2, 3, 2, 0.58), rgba(2, 3, 2, 0.18));
+}
+
+.event-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.event-item {
+  min-height: 260px;
+  display: grid;
+  align-content: space-between;
+  gap: 24px;
+  padding: clamp(24px, 3vw, 38px);
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(18, 12, 7, 0.86), rgba(3, 6, 4, 0.6));
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+}
+
+.event-item span {
+  color: var(--copper-soft);
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.event-item h3 {
+  margin: 0;
+  color: var(--cream);
+  font-size: clamp(1.45rem, 2.4vw, 2.35rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.event-item p {
+  margin: 0;
+  color: var(--soft);
+  line-height: 1.55;
+}
+
+@keyframes artist-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
 }
 
 .gallery {
@@ -451,7 +560,6 @@ textarea:focus {
     padding: 13px 0;
   }
 
-  .statement,
   .booking {
     grid-template-columns: 1fr;
   }
@@ -466,8 +574,13 @@ textarea:focus {
     display: grid;
   }
 
-  .work-head h2 {
-    text-align: left;
+  .work-head p:not(.eyebrow) {
+    max-width: 640px;
+    padding-bottom: 0;
+  }
+
+  .event-list {
+    grid-template-columns: 1fr;
   }
 
   .gallery {
@@ -537,20 +650,27 @@ textarea:focus {
     width: 100%;
   }
 
-  .statement,
+  .collaborators,
+  .events,
   .work {
     padding-inline: 20px;
   }
 
-  .statement h2 {
-    font-size: clamp(2rem, 10vw, 3.35rem);
-    line-height: 1.02;
-  }
-
   .work-head h2,
+  .section-head h2,
   .booking-copy h2 {
     font-size: clamp(1.9rem, 9vw, 3.1rem);
     line-height: 1.03;
+  }
+
+  .artist-carousel {
+    margin-inline: -20px;
+  }
+
+  .artist-card {
+    width: 245px;
+    min-height: 170px;
+    padding: 22px;
   }
 
   .booking {
