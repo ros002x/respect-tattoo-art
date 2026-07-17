@@ -177,6 +177,15 @@ h1 {
     0 0 34px rgba(199, 131, 76, 0.18);
 }
 
+.hero-wordmark {
+  width: min(1180px, 82vw);
+  max-width: 100%;
+  margin-left: -8px;
+  filter:
+    drop-shadow(0 22px 46px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 0 18px rgba(199, 131, 76, 0.16));
+}
+
 .shop-line {
   margin: 16px 0 0;
   color: var(--cream);
@@ -467,6 +476,11 @@ textarea:focus {
   h1 {
     font-size: clamp(1.75rem, 9.5vw, 3.2rem);
     white-space: nowrap;
+  }
+
+  .hero-wordmark {
+    width: 100%;
+    margin-left: 0;
   }
 
   h2 {
