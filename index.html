@@ -9,108 +9,84 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <main class="poster" id="home">
-      <header class="topbar" data-header>
-        <a class="logo" href="#home" aria-label="Respect Tattoo Art">
-          <span class="totem-logo" aria-hidden="true"></span>
-        </a>
-        <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" data-menu-toggle>
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav" data-nav>
-          <a href="#home">Home</a>
-          <a href="#artists">Artists</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#booking">Booking</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+    <header class="topbar" data-header>
+      <a class="brand" href="#home" aria-label="Respect Tattoo Art">
+        <img src="assets/respect-logo.png" alt="Respect Tattoo Art logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#method">Method</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <section class="hero-block">
+    <main>
+      <section class="hero" id="home">
         <div class="hero-copy">
+          <p class="eyebrow">Tribal tattoo artist / Nova Siri</p>
           <h1>Respect<br><span>Tattoo Shop</span></h1>
-          <p class="artist-name">Maurizio D'Alessandro</p>
-          <p class="claim">Respect porta la tradizione occidentale nelle arti del tattoo raccontando la nostra via Maori.</p>
+          <p class="hero-text">Maurizio D'Alessandro disegna tattoo Maori, Polinesiani, Samoani e Marchesiani direttamente sul corpo. Ogni progetto nasce da anatomia, simboli e identita personale.</p>
           <a class="button" href="https://wa.me/393497873009" target="_blank" rel="noopener">Prenota la tua sessione</a>
+        </div>
+        <div class="hero-meta">
+          <span>Freehand</span>
+          <span>25+ anni</span>
+          <span>Black tribal</span>
         </div>
       </section>
 
-      <section class="content-board">
-        <div class="artists" id="artists">
-          <div class="bar-title">
-            <p>Studio identity</p>
-            <h2>I nostri artisti</h2>
-          </div>
-          <div class="artist-grid">
-            <article>
-              <div class="avatar avatar-photo"></div>
-              <h3>Maurizio</h3>
-              <p>Tribal freehand</p>
-            </article>
-            <article>
-              <div class="avatar">25+</div>
-              <h3>Esperienza</h3>
-              <p>Dal 2007</p>
-            </article>
-            <article>
-              <div class="avatar">M</div>
-              <h3>Maori</h3>
-              <p>Polinesiano</p>
-            </article>
-            <article>
-              <div class="avatar">R</div>
-              <h3>Respect</h3>
-              <p>Nova Siri</p>
-            </article>
-            <article>
-              <div class="avatar">S</div>
-              <h3>Samoano</h3>
-              <p>Marchesiano</p>
-            </article>
-          </div>
-        </div>
+      <section class="statement" id="method">
+        <p class="eyebrow">Metodo</p>
+        <h2>Non un disegno appoggiato sulla pelle. Una struttura costruita sul corpo.</h2>
+        <p>Dal profilo Instagram emerge un lavoro centrato su freehand, simboli tribali e progetti unici: il tattoo viene diviso in sedute, dalle linee di contorno ai pieni neri, cercando equilibrio con le forme anatomiche.</p>
+      </section>
 
-        <div class="gallery" id="gallery">
-          <div class="bar-title">
-            <p>Recent works</p>
-            <h2>Galleria recente</h2>
-          </div>
-          <div class="gallery-grid">
-            <figure class="large">
-              <img src="assets/maurizio-work-2.jpg" alt="Tatuaggio tribale su petto e spalla realizzato da Maurizio D'Alessandro">
-            </figure>
-            <figure>
-              <img src="assets/maurizio-work-1.jpg" alt="Manica tribale Maori e Polinesiana realizzata da Respect Tattoo Art">
-            </figure>
-            <figure>
-              <img src="assets/maurizio-work-3.jpg" alt="Tatuaggio tribale sulla gamba">
-            </figure>
-          </div>
+      <section class="work" id="work">
+        <div class="work-head">
+          <p class="eyebrow">Recent works</p>
+          <h2>Segni pieni. Corpo. Giungla nera.</h2>
+        </div>
+        <div class="gallery">
+          <figure class="piece piece-large">
+            <img src="assets/maurizio-work-2.jpg" alt="Tatuaggio tribale su petto e spalla realizzato da Maurizio D'Alessandro">
+          </figure>
+          <figure class="piece piece-mid">
+            <img src="assets/maurizio-work-1.jpg" alt="Manica tribale Maori e Polinesiana realizzata da Respect Tattoo Art">
+          </figure>
+          <figure class="piece piece-small">
+            <img src="assets/maurizio-work-3.jpg" alt="Tatuaggio tribale sulla gamba">
+          </figure>
         </div>
       </section>
 
       <section class="booking" id="booking">
-        <div>
-          <p class="booking-kicker">Booking</p>
-          <h2>Porta la tua idea a Maurizio</h2>
-          <p>Invia zona del corpo, dimensione indicativa e reference. Il progetto viene studiato sulla tua anatomia.</p>
+        <div class="booking-copy">
+          <p class="eyebrow">Booking</p>
+          <h2>Porta la tua idea a Maurizio.</h2>
+          <p>Invia zona del corpo, dimensione indicativa e reference. Il progetto viene studiato sulla tua anatomia e disegnato a mano libera.</p>
         </div>
         <form class="contact-form" data-contact-form>
           <input type="text" name="nome" autocomplete="name" placeholder="Nome" required>
           <input type="text" name="zona" placeholder="Zona del corpo" required>
-          <textarea name="idea" rows="3" placeholder="Idea tattoo" required></textarea>
+          <textarea name="idea" rows="4" placeholder="Idea tattoo" required></textarea>
           <button class="button" type="submit">Apri WhatsApp</button>
           <p class="form-note" data-form-note></p>
         </form>
       </section>
-
-      <footer class="contact" id="contact">
-        <a href="tel:+393497873009">+39 349 787 3009</a>
-        <a href="mailto:respecttattoostudio@gmail.com">respecttattoostudio@gmail.com</a>
-        <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">@maurizio_respect</a>
-      </footer>
     </main>
+
+    <footer class="footer" id="contact">
+      <a href="tel:+393497873009">+39 349 787 3009</a>
+      <a href="mailto:respecttattoostudio@gmail.com">respecttattoostudio@gmail.com</a>
+      <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">@maurizio_respect</a>
+      <span>Via Pietro Nenni, 23 - Nova Siri Scalo MT</span>
+    </footer>
 
     <script src="script.js"></script>
   </body>
