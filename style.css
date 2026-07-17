@@ -74,14 +74,14 @@ img {
 }
 
 .brand {
-  display: inline-flex;
-  align-items: center;
-  color: var(--cream);
-  font-family: var(--display-font);
-  font-size: clamp(1.25rem, 2vw, 2rem);
-  letter-spacing: 0;
-  text-transform: uppercase;
+  display: block;
+  width: clamp(50px, 5.4vw, 78px);
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.66));
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
 }
 
 .site-nav {
@@ -465,7 +465,7 @@ textarea:focus {
   }
 
   .brand {
-    font-size: 1.15rem;
+    width: 48px;
   }
 
   .hero {
