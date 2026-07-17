@@ -1,20 +1,14 @@
 # Respect Tattoo Art
 
-Sito statico per Respect Tattoo Art, studio tattoo di Maurizio D'Alessandro a Nova Siri, Basilicata.
+Sito statico per Respect Tattoo Art, studio di Maurizio D'Alessandro a Nova Siri Scalo.
 
-## Contatti da completare
+Il sito e centrato sulla specializzazione tribale: tattoo Maori, Polinesiani, Samoani e Marchesiani disegnati a mano libera sul corpo.
 
-Aggiornare `script.js`:
+## Fonti usate
 
-```js
-const contactConfig = {
-  whatsappNumber: "39...",
-  instagramUrl: "https://instagram.com/...",
-};
-```
-
-Poi sostituire o aggiungere eventuali indirizzo, telefono e link social in `index.html`.
+- Profilo artista Macko: bio, specializzazione e foto portfolio.
+- Schede pubbliche locali: indirizzo, telefono ed email.
 
 ## Pubblicazione
 
-Il sito e pronto per GitHub Pages: `index.html`, `style.css`, `script.js` e `assets/hero-studio.png`.
+Il sito e pronto per GitHub Pages: `index.html`, `style.css`, `script.js` e immagini in `assets/`.

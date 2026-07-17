@@ -5,8 +5,8 @@ const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
 
 const contactConfig = {
-  whatsappNumber: "",
-  instagramUrl: "",
+  whatsappNumber: "393497873009",
+  instagramUrl: "https://www.instagram.com/maurizio_respect/",
 };
 
 function syncHeader() {
@@ -43,10 +43,10 @@ contactForm.addEventListener("submit", (event) => {
 
   const data = new FormData(contactForm);
   const message = [
-    "Ciao Maurizio, vorrei informazioni per un tatuaggio.",
+    "Ciao Maurizio, vorrei informazioni per un tattoo tribale.",
     `Nome: ${data.get("nome")}`,
+    `Zona del corpo: ${data.get("zona")}`,
     `Idea: ${data.get("idea")}`,
-    `Contatto: ${data.get("contatto")}`,
   ].join("\n");
 
   if (contactConfig.whatsappNumber) {
@@ -57,7 +57,7 @@ contactForm.addEventListener("submit", (event) => {
 
   navigator.clipboard?.writeText(message).then(
     () => {
-      formNote.textContent = "Messaggio copiato. Aggiungi il numero WhatsApp ufficiale in script.js per inviarlo direttamente.";
+      formNote.textContent = "Messaggio copiato.";
     },
     () => {
       formNote.textContent = message;
