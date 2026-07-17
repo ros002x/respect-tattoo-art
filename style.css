@@ -337,20 +337,22 @@ h2 {
 }
 
 .artist-card {
-  width: clamp(230px, 22vw, 330px);
-  min-height: 320px;
+  width: clamp(240px, 22vw, 340px);
+  min-height: 260px;
   position: relative;
   overflow: hidden;
   display: grid;
-  align-content: end;
-  gap: 10px;
+  align-content: center;
+  justify-items: start;
+  gap: 12px;
   padding: 26px;
   border-radius: 32px;
-  background: rgba(2, 3, 2, 0.78);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(224, 166, 111, 0.18), transparent 32%),
+    linear-gradient(145deg, rgba(12, 14, 10, 0.96), rgba(2, 3, 2, 0.72));
   box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
 }
 
-.artist-card::after,
 .event-item::after,
 .work-feature::after {
   content: "";
@@ -362,13 +364,24 @@ h2 {
 
 .artist-card img,
 .event-item img {
-  position: absolute;
-  inset: 0;
-  height: 100%;
   object-fit: cover;
 }
 
-.artist-card > *:not(img),
+.artist-card img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px rgba(224, 166, 111, 0.45),
+    0 18px 42px rgba(0, 0, 0, 0.58);
+}
+
+.event-item img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+}
+
 .event-item > *:not(img) {
   position: relative;
   z-index: 1;
@@ -376,7 +389,7 @@ h2 {
 
 .artist-card strong {
   color: var(--cream);
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-size: clamp(1.3rem, 1.9vw, 1.8rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -738,8 +751,13 @@ textarea:focus {
 
   .artist-card {
     width: 245px;
-    min-height: 290px;
+    min-height: 245px;
     padding: 22px;
+  }
+
+  .artist-card img {
+    width: 86px;
+    height: 86px;
   }
 
   .work-feature {
