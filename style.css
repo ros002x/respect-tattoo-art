@@ -75,13 +75,14 @@ img {
 
 .brand {
   display: block;
-  width: clamp(50px, 5.4vw, 78px);
+  width: clamp(56px, 5.8vw, 86px);
   filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.66));
 }
 
 .brand img {
   width: 100%;
   height: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -177,10 +178,26 @@ h1 {
     0 0 34px rgba(199, 131, 76, 0.18);
 }
 
+.hero-title-lockup {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 44px);
+  width: min(1280px, 90vw);
+}
+
+.hero-logo {
+  flex: 0 0 clamp(92px, 11vw, 178px);
+  width: clamp(92px, 11vw, 178px);
+  filter:
+    drop-shadow(0 22px 46px rgba(0, 0, 0, 0.72))
+    drop-shadow(0 0 18px rgba(199, 131, 76, 0.18));
+}
+
 .hero-wordmark {
-  width: min(1180px, 82vw);
-  max-width: 100%;
-  margin-left: -8px;
+  flex: 1 1 auto;
+  width: min(1000px, 100%);
+  min-width: 0;
+  margin-left: 0;
   filter:
     drop-shadow(0 22px 46px rgba(0, 0, 0, 0.72))
     drop-shadow(0 0 18px rgba(199, 131, 76, 0.16));
@@ -465,7 +482,7 @@ textarea:focus {
   }
 
   .brand {
-    width: 48px;
+    width: 54px;
   }
 
   .hero {
@@ -481,6 +498,17 @@ textarea:focus {
   .hero-wordmark {
     width: 100%;
     margin-left: 0;
+  }
+
+  .hero-title-lockup {
+    align-items: flex-start;
+    gap: 14px;
+    width: 100%;
+  }
+
+  .hero-logo {
+    flex-basis: clamp(58px, 20vw, 84px);
+    width: clamp(58px, 20vw, 84px);
   }
 
   h2 {
