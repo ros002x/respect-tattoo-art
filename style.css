@@ -202,20 +202,20 @@ h1 {
 }
 
 .shop-line {
-  margin: 16px 0 0;
+  margin: 14px 0 0;
   color: var(--cream);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-size: clamp(2.1rem, 4.6vw, 5.6rem);
+  font-size: clamp(1.45rem, 2.8vw, 3.6rem);
   font-weight: 950;
-  line-height: 0.9;
+  line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
   text-shadow: 0 18px 50px rgba(0, 0, 0, 0.7);
 }
 
 h2 {
-  font-size: clamp(3.4rem, 7.4vw, 8.5rem);
-  line-height: 0.82;
+  font-size: clamp(2.25rem, 4.6vw, 5.4rem);
+  line-height: 0.96;
 }
 
 .hero-text {
@@ -264,9 +264,9 @@ h2 {
 
 .statement {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.62fr);
-  gap: clamp(34px, 7vw, 110px);
-  align-items: end;
+  grid-template-columns: minmax(0, 0.88fr) minmax(320px, 0.72fr);
+  gap: clamp(34px, 6vw, 92px);
+  align-items: center;
   padding: clamp(90px, 13vw, 180px) clamp(22px, 7vw, 120px);
   background: linear-gradient(180deg, rgba(2, 3, 2, 0.12), rgba(2, 3, 2, 0.72));
 }
@@ -277,9 +277,14 @@ h2 {
 }
 
 .statement h2 {
-  max-width: 920px;
-  font-size: clamp(2.8rem, 5.2vw, 5.9rem);
-  line-height: 0.94;
+  max-width: 760px;
+  font-size: clamp(2.35rem, 4.1vw, 4.9rem);
+  line-height: 1;
+}
+
+.work-head h2,
+.booking-copy h2 {
+  line-height: 1;
 }
 
 .statement p:not(.eyebrow),
@@ -304,7 +309,8 @@ h2 {
 }
 
 .work-head h2 {
-  max-width: 780px;
+  max-width: 640px;
+  font-size: clamp(2.2rem, 3.9vw, 4.8rem);
   text-align: right;
 }
 
@@ -359,6 +365,11 @@ h2 {
     linear-gradient(135deg, rgba(18, 12, 7, 0.92), rgba(5, 8, 5, 0.62));
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.52);
   backdrop-filter: blur(14px);
+}
+
+.booking-copy h2 {
+  max-width: 560px;
+  font-size: clamp(2.1rem, 3.8vw, 4.7rem);
 }
 
 .contact-form {
@@ -514,7 +525,12 @@ textarea:focus {
   }
 
   h2 {
-    font-size: clamp(2.4rem, 12vw, 4.3rem);
+    font-size: clamp(1.9rem, 9vw, 3.25rem);
+    line-height: 1;
+  }
+
+  .shop-line {
+    font-size: clamp(1.35rem, 8vw, 2.6rem);
   }
 
   .button {
@@ -527,8 +543,14 @@ textarea:focus {
   }
 
   .statement h2 {
-    font-size: clamp(2rem, 12vw, 3.9rem);
-    line-height: 0.98;
+    font-size: clamp(2rem, 10vw, 3.35rem);
+    line-height: 1.02;
+  }
+
+  .work-head h2,
+  .booking-copy h2 {
+    font-size: clamp(1.9rem, 9vw, 3.1rem);
+    line-height: 1.03;
   }
 
   .booking {
