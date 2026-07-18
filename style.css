@@ -642,13 +642,19 @@ textarea:focus {
 @media (max-width: 620px) {
   body {
     background:
-      linear-gradient(90deg, rgba(2, 3, 2, 0.98), rgba(2, 3, 2, 0.48) 54%, rgba(2, 3, 2, 0.92)),
+      linear-gradient(90deg, rgba(2, 3, 2, 0.82), rgba(2, 3, 2, 0.34) 52%, rgba(2, 3, 2, 0.74)),
       url("assets/jungle-hero.png") center top / cover scroll;
   }
 
+  body::after {
+    background:
+      radial-gradient(circle at 68% 14%, rgba(224, 166, 111, 0.1), transparent 28%),
+      linear-gradient(180deg, rgba(2, 3, 2, 0.08), rgba(2, 3, 2, 0.5) 92%);
+  }
+
   .topbar {
-    padding: 12px 14px;
-    background: linear-gradient(180deg, rgba(2, 3, 2, 0.94), rgba(2, 3, 2, 0.3) 72%, rgba(2, 3, 2, 0));
+    padding: 10px 14px;
+    background: linear-gradient(180deg, rgba(2, 3, 2, 0.82), rgba(2, 3, 2, 0.2) 72%, rgba(2, 3, 2, 0));
   }
 
   .brand {
@@ -656,12 +662,12 @@ textarea:focus {
   }
 
   .brand-mark {
-    width: 46px;
-    height: 46px;
+    width: 40px;
+    height: 40px;
   }
 
   .brand-wordmark {
-    width: min(62vw, 238px);
+    width: min(50vw, 190px);
   }
 
   .menu-toggle {
@@ -677,19 +683,19 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 82svh;
+    min-height: 76svh;
     align-items: center;
-    padding: 84px 16px 34px;
+    padding: 74px 16px 30px;
   }
 
   .hero-copy {
-    transform: translateY(22px);
+    transform: translateY(14px);
   }
 
   .hero-wordmark {
-    width: 126vw;
+    width: 106vw;
     max-width: none;
-    margin-left: -4px;
+    margin-left: -2px;
   }
 
   .eyebrow {
@@ -698,56 +704,57 @@ textarea:focus {
   }
 
   h2 {
-    font-size: clamp(1.72rem, 8.8vw, 2.75rem);
+    font-size: clamp(1.5rem, 7.6vw, 2.25rem);
     line-height: 0.98;
   }
 
   .work-main h3,
   .work-process h3,
   .event-item h3 {
-    font-size: clamp(1.22rem, 6.2vw, 1.9rem);
+    font-size: clamp(1.08rem, 5.4vw, 1.62rem);
   }
 
   .shop-line {
-    margin-top: 10px;
-    font-size: clamp(1.18rem, 6.8vw, 1.9rem);
+    margin-top: 8px;
+    font-size: clamp(1.05rem, 5.8vw, 1.6rem);
   }
 
   .hero-text {
     max-width: 34rem;
-    margin-top: 16px;
-    font-size: 0.92rem;
-    line-height: 1.44;
+    margin-top: 12px;
+    font-size: 0.86rem;
+    line-height: 1.42;
   }
 
   .button {
     width: 100%;
-    min-height: 46px;
-    margin-top: 22px;
-    padding: 12px 18px;
+    min-height: 42px;
+    margin-top: 18px;
+    padding: 11px 16px;
+    font-size: 0.75rem;
   }
 
   .hero-meta {
-    margin-top: 22px;
+    margin-top: 18px;
     gap: 8px;
   }
 
   .hero-meta span {
-    padding: 8px 10px;
-    font-size: 0.68rem;
+    padding: 7px 9px;
+    font-size: 0.62rem;
   }
 
   .work,
   .collaborators,
   .events {
-    padding-top: 46px;
-    padding-bottom: 48px;
+    padding-top: 40px;
+    padding-bottom: 42px;
     padding-inline: 16px;
   }
 
   .work-head,
   .section-head {
-    margin-bottom: 22px;
+    margin-bottom: 18px;
   }
 
   .work-head {
@@ -756,23 +763,23 @@ textarea:focus {
 
   .work-head p:not(.eyebrow),
   .booking-copy p {
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: 0.84rem;
+    line-height: 1.46;
   }
 
   .work-editorial {
-    gap: 16px;
+    gap: 12px;
   }
 
   .work-main {
-    min-height: 330px;
-    border-radius: 24px;
+    min-height: 285px;
+    border-radius: 20px;
   }
 
   .work-main > div {
-    left: 22px;
-    right: 22px;
-    bottom: 22px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
   }
 
   .work-process {
@@ -781,14 +788,14 @@ textarea:focus {
 
   .work-process article {
     min-height: 0;
-    padding: 18px;
-    border-radius: 20px;
+    padding: 16px;
+    border-radius: 18px;
   }
 
   .work-process p,
   .event-item p {
-    font-size: 0.9rem;
-    line-height: 1.48;
+    font-size: 0.84rem;
+    line-height: 1.44;
   }
 
   .work-gallery-line,
@@ -801,8 +808,8 @@ textarea:focus {
   }
 
   .work-gallery-line img {
-    aspect-ratio: 4 / 3;
-    border-radius: 24px;
+    aspect-ratio: 16 / 10;
+    border-radius: 18px;
   }
 
   .artist-carousel {
@@ -813,15 +820,15 @@ textarea:focus {
   }
 
   .artist-track {
-    gap: 14px;
-    animation-duration: 36s;
+    gap: 12px;
+    animation-duration: 22s;
   }
 
   .artist-card {
-    flex-basis: min(72vw, 300px);
-    border-radius: 22px;
-    padding: 18px;
-    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42);
+    flex-basis: min(62vw, 250px);
+    border-radius: 18px;
+    padding: 14px;
+    box-shadow: 0 20px 46px rgba(0, 0, 0, 0.38);
   }
 
   .artist-poster .artist-role,
@@ -837,20 +844,20 @@ textarea:focus {
 
   .event-item {
     min-height: 0;
-    gap: 18px;
-    border-radius: 22px;
-    padding: 20px;
+    gap: 14px;
+    border-radius: 18px;
+    padding: 16px;
   }
 
   .booking {
     margin-inline: 16px;
-    margin-bottom: 48px;
-    padding: 24px 18px 20px;
-    border-radius: 24px;
+    margin-bottom: 42px;
+    padding: 20px 16px 18px;
+    border-radius: 20px;
   }
 
   .booking-copy h2 {
-    font-size: clamp(1.75rem, 8.8vw, 2.55rem);
+    font-size: clamp(1.5rem, 7.6vw, 2.22rem);
   }
 
   input,
