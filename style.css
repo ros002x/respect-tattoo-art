@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,6 +28,7 @@ body {
     linear-gradient(90deg, rgba(2, 3, 2, 0.98) 0%, rgba(2, 3, 2, 0.52) 48%, rgba(2, 3, 2, 0.86) 100%),
     url("assets/jungle-hero.png") center / cover fixed;
   color: var(--cream);
+  overflow-x: hidden;
 }
 
 body::after {
@@ -320,7 +322,7 @@ h2 {
 }
 
 .artist-carousel {
-  margin-inline: calc(clamp(22px, 7vw, 120px) * -1);
+  margin-inline: 0;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
 }
@@ -332,20 +334,28 @@ h2 {
 }
 
 .artist-card {
-  width: clamp(240px, 22vw, 340px);
-  min-height: 260px;
+  width: clamp(300px, 28vw, 420px);
+  min-height: clamp(430px, 36vw, 560px);
   position: relative;
   overflow: hidden;
   display: grid;
-  align-content: center;
-  justify-items: start;
+  align-content: end;
+  justify-items: stretch;
   gap: 12px;
-  padding: 26px;
-  border-radius: 32px;
+  padding: 30px;
+  border-radius: 34px;
   background:
     radial-gradient(circle at 20% 0%, rgba(224, 166, 111, 0.18), transparent 32%),
     linear-gradient(145deg, rgba(12, 14, 10, 0.96), rgba(2, 3, 2, 0.72));
   box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
+}
+
+.artist-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 34%, rgba(2, 3, 2, 0.92));
 }
 
 .event-item::after {
@@ -364,12 +374,11 @@ h2 {
 
 .artist-card img,
 .artist-photo-fallback {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 1px rgba(224, 166, 111, 0.45),
-    0 18px 42px rgba(0, 0, 0, 0.58);
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
 }
 
 .artist-photo-fallback {
@@ -379,8 +388,13 @@ h2 {
     radial-gradient(circle at 30% 18%, rgba(224, 166, 111, 0.32), transparent 34%),
     #070906;
   color: var(--copper-soft);
-  font-size: 1.45rem;
+  font-size: clamp(3.5rem, 7vw, 7.5rem);
   font-weight: 950;
+}
+
+.artist-card > *:not(img):not(.artist-photo-fallback) {
+  position: relative;
+  z-index: 1;
 }
 
 .event-item img {
@@ -435,6 +449,33 @@ h2 {
   border-radius: 34px;
   background: rgba(2, 3, 2, 0.78);
   box-shadow: 0 28px 70px rgba(0, 0, 0, 0.34);
+}
+
+.event-bari,
+.event-rome,
+.event-lecce,
+.event-novasiri {
+  background:
+    radial-gradient(circle at 24% 18%, rgba(224, 166, 111, 0.2), transparent 28%),
+    linear-gradient(145deg, rgba(17, 26, 16, 0.94), rgba(2, 3, 2, 0.74));
+}
+
+.event-bari {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(224, 166, 111, 0.24), transparent 30%),
+    linear-gradient(145deg, rgba(26, 14, 8, 0.92), rgba(2, 3, 2, 0.78));
+}
+
+.event-rome {
+  background:
+    radial-gradient(circle at 72% 16%, rgba(145, 32, 22, 0.24), transparent 30%),
+    linear-gradient(145deg, rgba(18, 12, 10, 0.94), rgba(2, 3, 2, 0.78));
+}
+
+.event-lecce {
+  background:
+    radial-gradient(circle at 20% 12%, rgba(37, 92, 61, 0.28), transparent 28%),
+    linear-gradient(145deg, rgba(6, 23, 14, 0.94), rgba(2, 3, 2, 0.78));
 }
 
 .event-item span {
@@ -758,19 +799,20 @@ textarea:focus {
   }
 
   .artist-carousel {
-    margin-inline: -20px;
+    margin-inline: 0;
+    mask-image: linear-gradient(90deg, #000, #000);
   }
 
   .artist-card {
-    width: 245px;
-    min-height: 245px;
+    width: min(78vw, 340px);
+    min-height: 440px;
     padding: 22px;
   }
 
   .artist-card img,
   .artist-photo-fallback {
-    width: 112px;
-    height: 112px;
+    width: 100%;
+    height: 100%;
   }
 
   .event-list {
