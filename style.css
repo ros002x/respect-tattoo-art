@@ -144,12 +144,14 @@ img {
   min-height: 100vh;
   position: relative;
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 430px);
+  gap: clamp(28px, 4vw, 74px);
   align-items: center;
   padding: 132px clamp(22px, 7vw, 120px) 86px;
 }
 
 .hero-copy {
-  width: min(1180px, 100%);
+  width: min(980px, 100%);
 }
 
 .eyebrow {
@@ -161,7 +163,7 @@ img {
 }
 
 .hero-wordmark {
-  width: min(1180px, 82vw);
+  width: min(980px, 58vw);
   margin-left: 0;
   filter:
     drop-shadow(0 22px 46px rgba(0, 0, 0, 0.72))
@@ -183,6 +185,53 @@ img {
   color: var(--soft);
   font-size: clamp(1.06rem, 1.7vw, 1.35rem);
   line-height: 1.45;
+}
+
+.hero-profile {
+  position: relative;
+  align-self: end;
+  width: min(100%, 420px);
+  margin-bottom: 40px;
+  justify-self: end;
+}
+
+.hero-profile img {
+  width: 100%;
+  aspect-ratio: 9 / 14;
+  object-fit: cover;
+  border-radius: clamp(26px, 3vw, 48px);
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(241, 223, 191, 0.08);
+}
+
+.hero-profile-copy {
+  position: absolute;
+  left: -72px;
+  right: 24px;
+  bottom: 24px;
+  padding: 22px 24px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(224, 166, 111, 0.18), transparent 42%),
+    linear-gradient(135deg, rgba(2, 3, 2, 0.86), rgba(2, 3, 2, 0.58));
+  color: var(--soft);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.46);
+  backdrop-filter: blur(12px);
+}
+
+.hero-profile-copy span {
+  display: block;
+  color: var(--copper-soft);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.hero-profile-copy p {
+  margin: 9px 0 0;
+  font-size: 0.94rem;
+  line-height: 1.5;
 }
 
 .button {
@@ -630,10 +679,21 @@ textarea:focus {
     padding: 13px 0;
   }
 
+  .hero,
   .work-head,
   .work-editorial,
   .booking {
     grid-template-columns: 1fr;
+  }
+
+  .hero-profile {
+    width: min(420px, 100%);
+    justify-self: start;
+    margin-bottom: 0;
+  }
+
+  .hero-profile-copy {
+    left: 20px;
   }
 
   .hero-meta {
@@ -686,19 +746,55 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 76svh;
+    min-height: auto;
     align-items: center;
-    padding: 74px 16px 30px;
+    gap: 22px;
+    padding: 74px 16px 34px;
   }
 
   .hero-copy {
-    transform: translateY(14px);
+    transform: none;
   }
 
   .hero-wordmark {
-    width: 106vw;
+    width: 102vw;
     max-width: none;
     margin-left: -2px;
+  }
+
+  .hero-profile {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    gap: 14px;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-profile img {
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+  }
+
+  .hero-profile-copy {
+    position: static;
+    display: grid;
+    align-content: center;
+    padding: 14px 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  .hero-profile-copy span {
+    font-size: 0.64rem;
+  }
+
+  .hero-profile-copy p {
+    margin-top: 7px;
+    font-size: 0.78rem;
+    line-height: 1.38;
   }
 
   .eyebrow {
