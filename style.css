@@ -393,10 +393,6 @@ h2 {
   will-change: transform;
 }
 
-.artist-carousel:hover .artist-track {
-  animation-play-state: paused;
-}
-
 .artist-card {
   flex: 0 0 clamp(300px, 23vw, 410px);
   position: relative;
@@ -415,55 +411,12 @@ h2 {
   content: none;
 }
 
-.artist-card.has-repost::before {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  left: 2.2%;
-  bottom: 0.8%;
-  width: 7.4%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 45% 42%, rgba(36, 36, 36, 0.96), rgba(18, 18, 18, 0.98) 66%, rgba(18, 18, 18, 0));
-  filter: blur(0.2px);
-  pointer-events: none;
-}
-
 .artist-card::after {
   content: none;
 }
 
-.artist-card.has-repost::after {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  right: 2.2%;
-  bottom: 0.8%;
-  width: 7.4%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 48% 48%, rgba(34, 34, 34, 0.96), rgba(18, 18, 18, 0.98) 68%, rgba(18, 18, 18, 0));
-  filter: blur(0.2px);
-}
-
 .artist-poster::after {
   background: none;
-}
-
-.repost-mask {
-  position: absolute;
-  z-index: 3;
-  left: 10.5%;
-  bottom: 5.4%;
-  width: 9%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.98), rgba(16, 16, 16, 0.98) 64%, rgba(16, 16, 16, 0));
-  pointer-events: none;
 }
 
 .artist-photo-fallback {
@@ -694,8 +647,8 @@ textarea:focus {
   }
 
   .topbar {
-    padding: 14px 16px;
-    background: linear-gradient(180deg, rgba(2, 3, 2, 0.86), rgba(2, 3, 2, 0));
+    padding: 12px 14px;
+    background: linear-gradient(180deg, rgba(2, 3, 2, 0.94), rgba(2, 3, 2, 0.3) 72%, rgba(2, 3, 2, 0));
   }
 
   .brand {
@@ -703,12 +656,12 @@ textarea:focus {
   }
 
   .brand-mark {
-    width: 44px;
-    height: 44px;
+    width: 46px;
+    height: 46px;
   }
 
   .brand-wordmark {
-    width: min(56vw, 218px);
+    width: min(62vw, 238px);
   }
 
   .menu-toggle {
@@ -724,15 +677,19 @@ textarea:focus {
   }
 
   .hero {
-    min-height: 86svh;
-    align-items: end;
-    padding: 82px 18px 38px;
+    min-height: 82svh;
+    align-items: center;
+    padding: 84px 16px 34px;
+  }
+
+  .hero-copy {
+    transform: translateY(22px);
   }
 
   .hero-wordmark {
-    width: 116vw;
+    width: 126vw;
     max-width: none;
-    margin-left: 0;
+    margin-left: -4px;
   }
 
   .eyebrow {
@@ -741,45 +698,56 @@ textarea:focus {
   }
 
   h2 {
-    font-size: clamp(2rem, 10vw, 3.25rem);
-    line-height: 0.96;
+    font-size: clamp(1.72rem, 8.8vw, 2.75rem);
+    line-height: 0.98;
   }
 
   .work-main h3,
   .work-process h3,
   .event-item h3 {
-    font-size: clamp(1.45rem, 7vw, 2.25rem);
+    font-size: clamp(1.22rem, 6.2vw, 1.9rem);
   }
 
   .shop-line {
     margin-top: 10px;
-    font-size: clamp(1.25rem, 7.5vw, 2.2rem);
+    font-size: clamp(1.18rem, 6.8vw, 1.9rem);
   }
 
   .hero-text {
     max-width: 34rem;
     margin-top: 16px;
-    font-size: 0.96rem;
-    line-height: 1.46;
+    font-size: 0.92rem;
+    line-height: 1.44;
   }
 
   .button {
     width: 100%;
-    min-height: 48px;
-    margin-top: 24px;
+    min-height: 46px;
+    margin-top: 22px;
+    padding: 12px 18px;
+  }
+
+  .hero-meta {
+    margin-top: 22px;
+    gap: 8px;
+  }
+
+  .hero-meta span {
+    padding: 8px 10px;
+    font-size: 0.68rem;
   }
 
   .work,
   .collaborators,
   .events {
-    padding-top: 56px;
-    padding-bottom: 58px;
-    padding-inline: 18px;
+    padding-top: 46px;
+    padding-bottom: 48px;
+    padding-inline: 16px;
   }
 
   .work-head,
   .section-head {
-    margin-bottom: 28px;
+    margin-bottom: 22px;
   }
 
   .work-head {
@@ -788,8 +756,8 @@ textarea:focus {
 
   .work-head p:not(.eyebrow),
   .booking-copy p {
-    font-size: 0.98rem;
-    line-height: 1.55;
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .work-editorial {
@@ -797,8 +765,8 @@ textarea:focus {
   }
 
   .work-main {
-    min-height: 390px;
-    border-radius: 28px;
+    min-height: 330px;
+    border-radius: 24px;
   }
 
   .work-main > div {
@@ -813,8 +781,14 @@ textarea:focus {
 
   .work-process article {
     min-height: 0;
-    padding: 22px;
-    border-radius: 24px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .work-process p,
+  .event-item p {
+    font-size: 0.9rem;
+    line-height: 1.48;
   }
 
   .work-gallery-line,
@@ -832,10 +806,10 @@ textarea:focus {
   }
 
   .artist-carousel {
-    width: calc(100vw - 18px);
-    margin-left: -18px;
-    padding-left: 18px;
-    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+    width: 100vw;
+    margin-left: -16px;
+    padding-left: 16px;
+    mask-image: linear-gradient(90deg, transparent, #000 3%, #000 97%, transparent);
   }
 
   .artist-track {
@@ -844,9 +818,10 @@ textarea:focus {
   }
 
   .artist-card {
-    flex-basis: min(78vw, 330px);
-    border-radius: 26px;
-    padding: 22px;
+    flex-basis: min(72vw, 300px);
+    border-radius: 22px;
+    padding: 18px;
+    box-shadow: 0 24px 58px rgba(0, 0, 0, 0.42);
   }
 
   .artist-poster .artist-role,
@@ -861,20 +836,21 @@ textarea:focus {
   }
 
   .event-item {
-    min-height: 210px;
-    border-radius: 26px;
-    padding: 24px;
+    min-height: 0;
+    gap: 18px;
+    border-radius: 22px;
+    padding: 20px;
   }
 
   .booking {
-    margin-inline: 18px;
-    margin-bottom: 56px;
-    padding: 28px 20px 22px;
-    border-radius: 28px;
+    margin-inline: 16px;
+    margin-bottom: 48px;
+    padding: 24px 18px 20px;
+    border-radius: 24px;
   }
 
   .booking-copy h2 {
-    font-size: clamp(2rem, 10vw, 3rem);
+    font-size: clamp(1.75rem, 8.8vw, 2.55rem);
   }
 
   input,
