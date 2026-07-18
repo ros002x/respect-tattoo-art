@@ -271,6 +271,68 @@ img {
   backdrop-filter: blur(10px);
 }
 
+.tribal-project {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.54fr) minmax(0, 0.86fr);
+  gap: clamp(28px, 6vw, 92px);
+  align-items: center;
+  padding: clamp(70px, 9vw, 120px) clamp(22px, 7vw, 120px);
+  background:
+    linear-gradient(90deg, rgba(2, 3, 2, 0.96), rgba(7, 23, 15, 0.46), rgba(2, 3, 2, 0.82));
+}
+
+.tribal-project-photo {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border-radius: clamp(26px, 4vw, 58px);
+  box-shadow: 0 42px 100px rgba(0, 0, 0, 0.52);
+}
+
+.tribal-project-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.tribal-project-copy {
+  max-width: 760px;
+}
+
+.tribal-project-copy h2 {
+  max-width: 760px;
+}
+
+.tribal-project-copy > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 26px 0 0;
+  color: var(--soft);
+  font-size: clamp(1.16rem, 1.8vw, 1.55rem);
+  line-height: 1.46;
+}
+
+.tribal-project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.tribal-project-links a {
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.34);
+  color: var(--copper-soft);
+  padding: 10px 14px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.tribal-project-links a:hover {
+  color: var(--cream);
+}
+
 .work,
 .collaborators,
 .events {
@@ -680,6 +742,7 @@ textarea:focus {
   }
 
   .hero,
+  .tribal-project,
   .work-head,
   .work-editorial,
   .booking {
@@ -843,11 +906,41 @@ textarea:focus {
   }
 
   .work,
+  .tribal-project,
   .collaborators,
   .events {
     padding-top: 40px;
     padding-bottom: 42px;
     padding-inline: 16px;
+  }
+
+  .tribal-project {
+    gap: 18px;
+  }
+
+  .tribal-project-photo {
+    border-radius: 22px;
+  }
+
+  .tribal-project-photo img {
+    aspect-ratio: 16 / 11;
+    object-position: center 34%;
+  }
+
+  .tribal-project-copy > p:not(.eyebrow) {
+    margin-top: 14px;
+    font-size: 0.92rem;
+    line-height: 1.44;
+  }
+
+  .tribal-project-links {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .tribal-project-links a {
+    padding: 8px 10px;
+    font-size: 0.64rem;
   }
 
   .work-head,
