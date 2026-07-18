@@ -25,6 +25,7 @@ body {
   min-width: 320px;
   margin: 0;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
   background:
     linear-gradient(90deg, rgba(2, 3, 2, 0.98), rgba(2, 3, 2, 0.54) 48%, rgba(2, 3, 2, 0.9)),
     url("assets/jungle-hero.png") center / cover fixed;
@@ -378,14 +379,17 @@ h2 {
 
 .artist-carousel {
   overflow: hidden;
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  width: calc(100vw - clamp(44px, 14vw, 240px));
+  margin-left: calc(clamp(22px, 7vw, 120px) * -1);
+  padding-left: clamp(22px, 7vw, 120px);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
 
 .artist-track {
   display: flex;
   width: max-content;
-  gap: 18px;
-  animation: artists-loop 42s linear infinite;
+  gap: clamp(14px, 2vw, 24px);
+  animation: artists-loop 48s linear infinite;
   will-change: transform;
 }
 
@@ -394,27 +398,21 @@ h2 {
 }
 
 .artist-card {
-  flex: 0 0 clamp(280px, 24vw, 390px);
+  flex: 0 0 clamp(300px, 23vw, 410px);
   position: relative;
   aspect-ratio: 9 / 16;
   overflow: hidden;
   display: grid;
   align-content: end;
   gap: 10px;
-  padding: 28px 26px 28px 104px;
-  border-radius: 34px;
+  padding: 26px;
+  border-radius: clamp(24px, 2.3vw, 38px);
   background: #070906;
-  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.42);
+  box-shadow: 0 36px 90px rgba(0, 0, 0, 0.46);
 }
 
 .artist-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  z-index: 1;
-  width: 34%;
-  min-width: 96px;
-  background: rgba(2, 3, 2, 0.62);
+  content: none;
 }
 
 .artist-card::after {
@@ -422,7 +420,13 @@ h2 {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, transparent 34%, rgba(2, 3, 2, 0.9));
+  background: linear-gradient(180deg, transparent 58%, rgba(2, 3, 2, 0.86));
+}
+
+.artist-poster::after {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 22%, rgba(0, 0, 0, 0.18));
+  box-shadow: inset 0 0 0 1px rgba(241, 223, 191, 0.08);
 }
 
 .artist-photo-fallback {
@@ -443,6 +447,17 @@ h2 {
   z-index: 2;
 }
 
+.artist-poster img {
+  filter: contrast(1.04);
+}
+
+.artist-poster .artist-role,
+.artist-poster strong,
+.artist-poster a,
+.artist-poster span:not(.artist-role) {
+  display: none;
+}
+
 .artist-vertical {
   position: absolute;
   z-index: 2;
@@ -460,7 +475,7 @@ h2 {
 
 .artist-card strong {
   color: var(--cream);
-  font-size: clamp(1.35rem, 2vw, 2rem);
+  font-size: clamp(1.05rem, 1.55vw, 1.52rem);
   line-height: 1;
   text-transform: uppercase;
 }
@@ -468,7 +483,7 @@ h2 {
 .artist-card a,
 .artist-card span:not(.artist-role) {
   color: var(--soft);
-  font-size: 0.94rem;
+  font-size: 0.82rem;
 }
 
 @keyframes artists-loop {
@@ -635,26 +650,46 @@ textarea:focus {
 }
 
 @media (max-width: 620px) {
+  body {
+    background:
+      linear-gradient(90deg, rgba(2, 3, 2, 0.98), rgba(2, 3, 2, 0.48) 54%, rgba(2, 3, 2, 0.92)),
+      url("assets/jungle-hero.png") center top / cover scroll;
+  }
+
   .topbar {
-    padding: 20px;
+    padding: 14px 16px;
+    background: linear-gradient(180deg, rgba(2, 3, 2, 0.86), rgba(2, 3, 2, 0));
   }
 
   .brand {
-    gap: 10px;
+    gap: 8px;
   }
 
   .brand-mark {
-    width: 46px;
-    height: 46px;
+    width: 42px;
+    height: 42px;
   }
 
   .brand-wordmark {
-    width: min(42vw, 168px);
+    width: min(47vw, 178px);
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .site-nav {
+    top: 66px;
+    left: 12px;
+    right: 12px;
+    border-radius: 22px;
   }
 
   .hero {
-    min-height: 86vh;
-    padding: 104px 20px 48px;
+    min-height: 92svh;
+    align-items: end;
+    padding: 92px 18px 44px;
   }
 
   .hero-wordmark {
@@ -662,29 +697,86 @@ textarea:focus {
     margin-left: 0;
   }
 
-  h2,
-  .work-main h3 {
-    font-size: clamp(1.9rem, 9vw, 3.1rem);
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.68rem;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 10vw, 3.25rem);
+    line-height: 0.96;
+  }
+
+  .work-main h3,
+  .work-process h3,
+  .event-item h3 {
+    font-size: clamp(1.45rem, 7vw, 2.25rem);
   }
 
   .shop-line {
-    font-size: clamp(1.35rem, 8vw, 2.6rem);
+    margin-top: 10px;
+    font-size: clamp(1.25rem, 7.5vw, 2.2rem);
+  }
+
+  .hero-text {
+    max-width: 34rem;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
   }
 
   .button {
     width: 100%;
+    min-height: 48px;
+    margin-top: 24px;
   }
 
   .work,
   .collaborators,
   .events {
-    padding-top: 72px;
-    padding-bottom: 72px;
-    padding-inline: 20px;
+    padding-top: 68px;
+    padding-bottom: 68px;
+    padding-inline: 18px;
+  }
+
+  .work-head,
+  .section-head {
+    margin-bottom: 28px;
+  }
+
+  .work-head {
+    gap: 18px;
+  }
+
+  .work-head p:not(.eyebrow),
+  .booking-copy p {
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  .work-editorial {
+    gap: 16px;
   }
 
   .work-main {
-    min-height: 420px;
+    min-height: 440px;
+    border-radius: 28px;
+  }
+
+  .work-main > div {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .work-process {
+    gap: 12px;
+  }
+
+  .work-process article {
+    min-height: 0;
+    padding: 22px;
+    border-radius: 24px;
   }
 
   .work-gallery-line,
@@ -692,27 +784,73 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
-  .artist-card {
-    flex-basis: min(78vw, 320px);
-    padding: 24px 22px 24px 92px;
+  .work-gallery-line {
+    gap: 14px;
   }
 
-  .artist-card::before {
-    min-width: 84px;
+  .work-gallery-line img {
+    aspect-ratio: 5 / 4;
+    border-radius: 24px;
+  }
+
+  .artist-carousel {
+    width: calc(100vw - 18px);
+    margin-left: -18px;
+    padding-left: 18px;
+    mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent);
+  }
+
+  .artist-track {
+    gap: 14px;
+    animation-duration: 40s;
+  }
+
+  .artist-card {
+    flex-basis: min(82vw, 340px);
+    border-radius: 26px;
+    padding: 22px;
+  }
+
+  .artist-poster .artist-role,
+  .artist-poster strong,
+  .artist-poster a,
+  .artist-poster span:not(.artist-role) {
+    max-width: 78%;
   }
 
   .artist-vertical {
-    left: 25px;
-    bottom: 26px;
-    font-size: clamp(2.2rem, 12vw, 3.6rem);
+    display: none;
   }
 
   .event-item {
-    min-height: 260px;
+    min-height: 240px;
+    border-radius: 26px;
+    padding: 24px;
   }
 
   .booking {
-    margin-inline: 20px;
-    padding: 28px 20px;
+    margin-inline: 18px;
+    margin-bottom: 68px;
+    padding: 28px 20px 22px;
+    border-radius: 28px;
+  }
+
+  .booking-copy h2 {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  input,
+  textarea {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .footer {
+    display: grid;
+    justify-items: center;
+    gap: 12px;
+    padding: 26px 18px 38px;
+    text-align: center;
+    font-size: 0.72rem;
   }
 }
