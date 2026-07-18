@@ -780,14 +780,14 @@ textarea:focus {
 @media (max-width: 620px) {
   body {
     background:
-      linear-gradient(90deg, rgba(2, 3, 2, 0.82), rgba(2, 3, 2, 0.34) 52%, rgba(2, 3, 2, 0.74)),
-      url("assets/jungle-hero.png") center top / cover scroll;
+      linear-gradient(90deg, rgba(2, 3, 2, 0.66), rgba(2, 3, 2, 0.18) 54%, rgba(2, 3, 2, 0.48)),
+      url("assets/jungle-hero.png") 58% top / cover scroll;
   }
 
   body::after {
     background:
-      radial-gradient(circle at 68% 14%, rgba(224, 166, 111, 0.1), transparent 28%),
-      linear-gradient(180deg, rgba(2, 3, 2, 0.08), rgba(2, 3, 2, 0.5) 92%);
+      radial-gradient(circle at 68% 14%, rgba(224, 166, 111, 0.12), transparent 30%),
+      linear-gradient(180deg, rgba(2, 3, 2, 0.02), rgba(2, 3, 2, 0.28) 92%);
   }
 
   .topbar {
@@ -860,10 +860,10 @@ textarea:focus {
     right: auto;
     bottom: auto;
     display: block;
-    width: 100%;
-    max-width: 430px;
+    width: min(78vw, 292px);
+    max-width: none;
     margin: 18px 0 0;
-    justify-self: start;
+    justify-self: center;
     padding: 0;
     overflow: hidden;
     border-radius: 24px;
@@ -878,8 +878,8 @@ textarea:focus {
   .hero-profile img {
     position: static;
     width: 100%;
-    height: 255px;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 9 / 14;
     border-radius: 0;
     object-fit: cover;
     object-position: center 38%;
@@ -943,9 +943,10 @@ textarea:focus {
 
   .button {
     grid-area: cta;
-    width: min(100%, 300px);
+    width: min(100%, 292px);
     min-height: 40px;
-    margin-top: 16px;
+    margin-top: 14px;
+    justify-self: center;
     padding: 10px 14px;
     font-size: 0.7rem;
   }
@@ -959,7 +960,7 @@ textarea:focus {
     bottom: auto;
     margin-top: 18px;
     gap: 8px;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .hero-meta span {
@@ -1185,15 +1186,15 @@ textarea:focus {
   }
 
   .hero-profile {
-    width: 100%;
-    max-width: 390px;
+    width: min(72vw, 260px);
+    max-width: none;
     margin-top: 14px;
     border-radius: 22px;
   }
 
   .hero-profile img {
-    height: 218px;
-    aspect-ratio: auto;
+    height: auto;
+    aspect-ratio: 9 / 14;
   }
 
   .hero-profile-copy {
