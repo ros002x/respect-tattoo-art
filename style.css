@@ -1150,6 +1150,8 @@ textarea:focus {
   }
 
   .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 10px;
     padding: 16px;
     border-radius: 24px;
@@ -1160,6 +1162,11 @@ textarea:focus {
       0 24px 70px rgba(0, 0, 0, 0.42),
       0 0 0 1px rgba(241, 223, 191, 0.08);
     backdrop-filter: blur(12px);
+  }
+
+  .contact-form > * {
+    grid-column: 1 / -1;
+    min-width: 0;
   }
 
   input,
@@ -1177,9 +1184,14 @@ textarea:focus {
   }
 
   .contact-form .button {
+    grid-area: auto;
     width: 100%;
     min-height: 48px;
+    height: 48px;
     margin-top: 2px;
+    border-radius: 999px;
+    padding: 0 16px;
+    justify-self: stretch;
   }
 
   .form-note {
