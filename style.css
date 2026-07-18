@@ -823,6 +823,13 @@ textarea:focus {
   .hero {
     min-height: auto;
     display: grid;
+    grid-template-areas:
+      "eyebrow"
+      "wordmark"
+      "shop"
+      "profile"
+      "cta"
+      "meta";
     align-content: start;
     gap: 0;
     overflow: visible;
@@ -830,61 +837,66 @@ textarea:focus {
   }
 
   .hero-copy {
-    position: relative;
-    z-index: 4;
+    display: contents;
     transform: none;
   }
 
+  .hero-copy .eyebrow {
+    grid-area: eyebrow;
+  }
+
   .hero-wordmark {
-    width: min(94vw, 370px);
+    grid-area: wordmark;
+    width: min(86vw, 330px);
     max-width: 100%;
     margin-left: 0;
   }
 
   .hero-profile {
+    grid-area: profile;
     position: relative;
     z-index: 3;
     left: auto;
     right: auto;
     bottom: auto;
-    display: grid;
-    grid-template-columns: 104px minmax(0, 1fr);
-    align-items: stretch;
+    display: block;
     width: 100%;
-    max-width: 390px;
-    margin: 20px 0 0;
+    max-width: 430px;
+    margin: 18px 0 0;
     justify-self: start;
     padding: 0;
     overflow: hidden;
-    border-radius: 22px;
-    background:
-      radial-gradient(circle at 0% 0%, rgba(224, 166, 111, 0.14), transparent 36%),
-      linear-gradient(135deg, rgba(2, 3, 2, 0.84), rgba(2, 3, 2, 0.46));
+    border-radius: 24px;
+    background: #050605;
     transform: none;
     box-shadow:
-      0 24px 60px rgba(0, 0, 0, 0.42),
+      0 26px 68px rgba(0, 0, 0, 0.48),
       0 0 0 1px rgba(241, 223, 191, 0.07);
-    backdrop-filter: blur(10px);
+    backdrop-filter: none;
   }
 
   .hero-profile img {
     position: static;
     width: 100%;
-    height: 136px;
+    height: 255px;
     aspect-ratio: auto;
     border-radius: 0;
     object-fit: cover;
+    object-position: center 38%;
   }
 
   .hero-profile-copy {
-    position: static;
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
     display: grid;
     align-content: center;
     padding: 12px 13px;
-    border-radius: 0;
-    background: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(2, 3, 2, 0.88), rgba(2, 3, 2, 0.48));
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.36);
+    backdrop-filter: blur(10px);
   }
 
   .hero-profile-copy span {
@@ -893,12 +905,12 @@ textarea:focus {
 
   .hero-profile-copy p {
     margin-top: 5px;
-    font-size: 0.65rem;
-    line-height: 1.34;
+    font-size: 0.66rem;
+    line-height: 1.32;
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
   }
 
   .eyebrow {
@@ -917,6 +929,7 @@ textarea:focus {
   }
 
   .shop-line {
+    grid-area: shop;
     margin-top: 6px;
     font-size: clamp(1.05rem, 5.8vw, 1.6rem);
   }
@@ -929,14 +942,16 @@ textarea:focus {
   }
 
   .button {
+    grid-area: cta;
     width: min(100%, 300px);
     min-height: 40px;
-    margin-top: 12px;
+    margin-top: 16px;
     padding: 10px 14px;
     font-size: 0.7rem;
   }
 
   .hero-meta {
+    grid-area: meta;
     position: static;
     z-index: 4;
     left: auto;
@@ -1156,7 +1171,7 @@ textarea:focus {
   }
 
   .hero-wordmark {
-    width: min(92vw, 342px);
+    width: min(84vw, 310px);
   }
 
   .shop-line {
@@ -1166,30 +1181,30 @@ textarea:focus {
 
   .button {
     min-height: 38px;
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
   .hero-profile {
     width: 100%;
-    max-width: 370px;
-    margin-top: 16px;
-    border-radius: 20px;
+    max-width: 390px;
+    margin-top: 14px;
+    border-radius: 22px;
   }
 
   .hero-profile img {
-    height: 124px;
+    height: 218px;
     aspect-ratio: auto;
   }
 
   .hero-profile-copy {
     padding: 10px 11px;
-    border-radius: 0;
+    border-radius: 14px;
   }
 
   .hero-profile-copy p {
     display: -webkit-box;
     font-size: 0.61rem;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
   }
 
   .hero-meta {
