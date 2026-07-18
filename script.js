@@ -3,7 +3,6 @@ const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
-const artistCarousel = document.querySelector("[data-artist-carousel]");
 
 const contactConfig = {
   whatsappNumber: "393497873009",
@@ -38,27 +37,6 @@ nav.addEventListener("click", (event) => {
 
 window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
-
-if (artistCarousel) {
-  const track = artistCarousel.querySelector(".artist-track");
-
-  window.setInterval(() => {
-    if (!track || track.children.length < 2 || artistCarousel.matches(":hover")) {
-      return;
-    }
-
-    const firstCard = track.firstElementChild;
-    const cardWidth = firstCard.getBoundingClientRect().width + 18;
-    track.style.transition = "transform 520ms ease";
-    track.style.transform = `translateX(-${cardWidth}px)`;
-
-    window.setTimeout(() => {
-      track.style.transition = "none";
-      track.style.transform = "translateX(0)";
-      track.appendChild(firstCard);
-    }, 540);
-  }, 2600);
-}
 
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
