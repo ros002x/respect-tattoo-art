@@ -815,18 +815,21 @@ h2 {
   opacity: 0;
   transform: translate3d(30%, 0, 120px) scale(0.9);
   transform-origin: center;
-  animation: product-cycle 8s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+  animation: product-cycle 14s cubic-bezier(0.7, 0, 0.2, 1) infinite;
   will-change: transform, opacity;
 }
 
 .product-slide-general {
-  animation-delay: 4s;
+  animation-delay: 7s;
 }
 
 .product-copy {
   order: 2;
   max-width: 420px;
   justify-self: start;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .product-copy span {
@@ -842,6 +845,7 @@ h2 {
   font-size: clamp(2.4rem, 5vw, 6rem);
   line-height: 0.94;
   text-transform: uppercase;
+  text-wrap: balance;
 }
 
 .product-copy p {
@@ -849,6 +853,10 @@ h2 {
   color: var(--soft);
   font-size: clamp(1rem, 1.35vw, 1.2rem);
   line-height: 1.55;
+  text-wrap: pretty;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .product-slide img {
@@ -869,13 +877,13 @@ h2 {
     transform: translate3d(34%, 0, 100px) scale(0.9);
   }
 
-  10%,
-  44% {
+  8%,
+  46% {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
   }
 
-  56%,
+  54%,
   100% {
     opacity: 0;
     transform: translate3d(-28%, 0, -160px) scale(0.84);
@@ -1383,18 +1391,20 @@ textarea:focus {
   }
 
   .product-copy {
-    max-width: 340px;
+    max-width: min(340px, 92vw);
     text-align: center;
   }
 
   .product-copy h3 {
     font-size: clamp(2rem, 10vw, 3.15rem);
+    text-wrap: balance;
   }
 
   .product-copy p {
     margin-top: 12px;
     font-size: 0.86rem;
     line-height: 1.44;
+    text-wrap: pretty;
   }
 
   .product-slide img {
