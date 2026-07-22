@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 920" role="img" aria-labelledby="title desc">
+  <title id="title">Tattoo Apple T-SUN</title>
+  <desc id="desc">Modello 2D del prodotto estate arancione Tattoo Apple T-SUN.</desc>
+  <defs>
+    <linearGradient id="orangeBody" x1="120" x2="400" y1="150" y2="840" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff9c19"/>
+      <stop offset=".45" stop-color="#ff7a10"/>
+      <stop offset="1" stop-color="#f05a12"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="155" x2="365" y1="56" y2="208" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5a3829"/>
+      <stop offset=".5" stop-color="#2f241f"/>
+      <stop offset="1" stop-color="#17110f"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="298" x2="370" y1="198" y2="810" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff4c8" stop-opacity=".38"/>
+      <stop offset=".45" stop-color="#fff4c8" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#fff4c8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-10%" width="160%" height="130%">
+      <feDropShadow dx="0" dy="28" stdDeviation="22" flood-color="#000" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="520" height="920" fill="none"/>
+  <g filter="url(#shadow)">
+    <rect x="146" y="58" width="228" height="142" rx="44" fill="url(#cap)"/>
+    <rect x="132" y="178" width="256" height="650" rx="52" fill="url(#orangeBody)"/>
+    <rect x="148" y="178" width="224" height="34" rx="12" fill="#472d23" opacity=".72"/>
+    <path d="M333 226c31 110 30 367-3 555" fill="none" stroke="url(#shine)" stroke-width="48" stroke-linecap="round"/>
+    <ellipse cx="260" cy="828" rx="116" ry="27" fill="#d64d14" opacity=".46"/>
+  </g>
+  <g fill="#5d4a40" opacity=".78">
+    <circle cx="260" cy="288" r="30"/>
+    <rect x="210" y="330" width="100" height="148" rx="36"/>
+    <rect x="178" y="368" width="38" height="126" rx="19"/>
+    <rect x="304" y="368" width="38" height="126" rx="19"/>
+  </g>
+  <g fill="none" stroke="#7a5f4f" stroke-width="7" opacity=".5">
+    <path d="M245 389c24-35 69-13 49 27-15 30-49 49-49 49s-38-26-49-58c-12-37 32-50 49-18z"/>
+    <path d="M260 350c16 26 16 56 0 85"/>
+    <path d="M233 436c26-3 51-18 66-41"/>
+  </g>
+  <text x="260" y="556" text-anchor="middle" fill="#5d4a40" font-family="Arial Black, Impact, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">TATTOO</text>
+  <text x="260" y="620" text-anchor="middle" fill="#8f705f" font-family="Georgia, serif" font-size="48" font-style="italic">Apple</text>
+  <text x="260" y="690" text-anchor="middle" fill="#5d4a40" font-family="Georgia, serif" font-size="70" font-weight="700" letter-spacing="2">T-SUN</text>
+  <text x="260" y="750" text-anchor="middle" fill="#8a5f51" font-family="Arial, sans-serif" font-size="27" font-weight="700">High Sun Protection</text>
+  <text x="260" y="788" text-anchor="middle" fill="#8a5f51" font-family="Arial, sans-serif" font-size="22" font-weight="700">UVA · UVB</text>
+  <text x="260" y="862" text-anchor="middle" fill="#ffcf77" font-family="Arial Black, Impact, sans-serif" font-size="22" letter-spacing="4">SUMMER</text>
+</svg>
