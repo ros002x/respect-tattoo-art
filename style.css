@@ -736,13 +736,13 @@ h2 {
 .products {
   padding: clamp(72px, 10vw, 132px) clamp(22px, 7vw, 120px);
   background:
-    radial-gradient(circle at 78% 18%, rgba(224, 166, 111, 0.14), transparent 32%),
-    linear-gradient(180deg, rgba(2, 3, 2, 0.12), rgba(2, 3, 2, 0.56));
+    radial-gradient(circle at 48% 34%, rgba(224, 166, 111, 0.1), transparent 36%),
+    linear-gradient(180deg, rgba(2, 3, 2, 0.04), rgba(2, 3, 2, 0.28));
 }
 
 .product-stage {
   position: relative;
-  min-height: clamp(560px, 58vw, 760px);
+  min-height: clamp(620px, 62vw, 820px);
   overflow: hidden;
 }
 
@@ -750,22 +750,24 @@ h2 {
   position: absolute;
   inset: 0;
   display: grid;
-  grid-template-columns: minmax(0, 0.72fr) minmax(340px, 0.9fr);
-  gap: clamp(24px, 5vw, 78px);
+  grid-template-columns: minmax(360px, 0.92fr) minmax(260px, 0.48fr);
+  gap: clamp(22px, 4vw, 64px);
   align-items: center;
   opacity: 0;
   transform: translateX(42%) scale(0.82);
   transform-origin: center;
-  animation: product-cycle 10s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  animation: product-cycle 60s cubic-bezier(0.76, 0, 0.24, 1) infinite;
   will-change: transform, opacity, filter;
 }
 
 .product-slide-general {
-  animation-delay: 5s;
+  animation-delay: 30s;
 }
 
 .product-copy {
-  max-width: 560px;
+  order: 2;
+  max-width: 420px;
+  justify-self: start;
 }
 
 .product-copy span {
@@ -791,9 +793,10 @@ h2 {
 }
 
 .product-slide img {
-  width: min(100%, 590px);
+  order: 1;
+  width: min(100%, 620px);
   justify-self: center;
-  filter: drop-shadow(0 42px 86px rgba(0, 0, 0, 0.58));
+  filter: drop-shadow(0 46px 90px rgba(0, 0, 0, 0.62));
 }
 
 @keyframes product-cycle {
@@ -910,7 +913,9 @@ textarea:focus {
   }
 
   .product-copy {
+    justify-self: center;
     max-width: 680px;
+    text-align: center;
   }
 }
 
@@ -1260,12 +1265,17 @@ textarea:focus {
   }
 
   .product-stage {
-    min-height: 610px;
+    min-height: 690px;
   }
 
   .product-slide {
     gap: 16px;
     align-content: start;
+  }
+
+  .product-copy {
+    max-width: 340px;
+    text-align: center;
   }
 
   .product-copy h3 {
@@ -1279,7 +1289,7 @@ textarea:focus {
   }
 
   .product-slide img {
-    width: min(98%, 360px);
+    width: min(100%, 360px);
   }
 
   .event-list {
