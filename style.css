@@ -860,8 +860,11 @@ h2 {
 
 .product-slide img {
   order: 1;
-  width: min(100%, 620px);
+  width: auto;
+  max-width: min(100%, 620px);
+  max-height: min(74vh, 760px);
   justify-self: center;
+  object-fit: contain;
   filter: drop-shadow(0 46px 90px rgba(0, 0, 0, 0.62));
   transform: translateZ(0);
 }
@@ -1367,7 +1370,9 @@ textarea:focus {
   }
 
   .product-slide img {
-    width: min(100%, 360px);
+    width: auto;
+    max-width: min(100%, 360px);
+    max-height: 430px;
   }
 
   .event-list {
