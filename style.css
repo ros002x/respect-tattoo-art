@@ -808,7 +808,7 @@ h2 {
 .product-stage {
   position: relative;
   min-height: clamp(620px, 62vw, 820px);
-  overflow: hidden;
+  overflow: visible;
   perspective: 1200px;
 }
 
@@ -862,7 +862,8 @@ h2 {
   order: 1;
   width: auto;
   max-width: min(100%, 620px);
-  max-height: min(74vh, 760px);
+  height: clamp(470px, 50vw, 640px);
+  max-height: min(70vh, 720px);
   justify-self: center;
   object-fit: contain;
   filter: drop-shadow(0 46px 90px rgba(0, 0, 0, 0.62));
@@ -977,6 +978,11 @@ textarea:focus {
   .product-slide {
     grid-template-columns: 1fr;
     align-content: center;
+  }
+
+  .product-slide img {
+    height: clamp(430px, 54vw, 560px);
+    max-height: 58vh;
   }
 
   .product-copy {
@@ -1346,12 +1352,12 @@ textarea:focus {
   }
 
   .product-stage {
-    min-height: 690px;
+    min-height: 620px;
   }
 
   .product-slide {
     gap: 16px;
-    align-content: start;
+    align-content: center;
   }
 
   .product-copy {
@@ -1372,7 +1378,8 @@ textarea:focus {
   .product-slide img {
     width: auto;
     max-width: min(100%, 360px);
-    max-height: 430px;
+    height: clamp(300px, 78vw, 380px);
+    max-height: 44vh;
   }
 
   .event-list {
