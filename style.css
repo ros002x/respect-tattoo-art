@@ -644,6 +644,91 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.products {
+  padding: clamp(72px, 10vw, 132px) clamp(22px, 7vw, 120px);
+  background:
+    radial-gradient(circle at 78% 18%, rgba(224, 166, 111, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(2, 3, 2, 0.12), rgba(2, 3, 2, 0.56));
+}
+
+.product-stage {
+  position: relative;
+  min-height: clamp(560px, 58vw, 760px);
+  overflow: hidden;
+}
+
+.product-slide {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(340px, 0.9fr);
+  gap: clamp(24px, 5vw, 78px);
+  align-items: center;
+  opacity: 0;
+  transform: translateX(42%) scale(0.82);
+  transform-origin: center;
+  animation: product-cycle 10s cubic-bezier(0.76, 0, 0.24, 1) infinite;
+  will-change: transform, opacity, filter;
+}
+
+.product-slide-general {
+  animation-delay: 5s;
+}
+
+.product-copy {
+  max-width: 560px;
+}
+
+.product-copy span {
+  color: var(--copper-soft);
+  font-size: 0.78rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.product-copy h3 {
+  margin: 12px 0 0;
+  color: var(--cream);
+  font-size: clamp(2.4rem, 5vw, 6rem);
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.product-copy p {
+  margin: 22px 0 0;
+  color: var(--soft);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.product-slide img {
+  width: min(100%, 590px);
+  justify-self: center;
+  filter: drop-shadow(0 42px 86px rgba(0, 0, 0, 0.58));
+}
+
+@keyframes product-cycle {
+  0% {
+    opacity: 0;
+    transform: translateX(44%) scale(0.82);
+    filter: blur(4px);
+  }
+
+  12%,
+  42% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+    transform: translateX(-36%) scale(0.62);
+    filter: blur(5px);
+  }
+}
+
 .booking {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(320px, 0.56fr);
@@ -724,6 +809,15 @@ textarea:focus {
 
   .event-feature {
     grid-column: 1 / -1;
+  }
+
+  .product-slide {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+
+  .product-copy {
+    max-width: 680px;
   }
 }
 
@@ -975,7 +1069,8 @@ textarea:focus {
 
   .work,
   .collaborators,
-  .events {
+  .events,
+  .products {
     padding-top: 34px;
     padding-bottom: 42px;
     padding-inline: 14px;
@@ -1030,6 +1125,29 @@ textarea:focus {
   .event-item p {
     font-size: 0.84rem;
     line-height: 1.44;
+  }
+
+  .product-stage {
+    min-height: 610px;
+  }
+
+  .product-slide {
+    gap: 16px;
+    align-content: start;
+  }
+
+  .product-copy h3 {
+    font-size: clamp(2rem, 10vw, 3.15rem);
+  }
+
+  .product-copy p {
+    margin-top: 12px;
+    font-size: 0.86rem;
+    line-height: 1.44;
+  }
+
+  .product-slide img {
+    width: min(98%, 360px);
   }
 
   .event-list {
