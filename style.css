@@ -274,7 +274,8 @@ img {
 
 .work,
 .collaborators,
-.events {
+.events,
+.care {
   padding: clamp(80px, 11vw, 150px) clamp(22px, 7vw, 120px);
 }
 
@@ -644,6 +645,94 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+.care {
+  background:
+    linear-gradient(90deg, rgba(2, 3, 2, 0.86), rgba(7, 23, 15, 0.5), rgba(2, 3, 2, 0.82));
+}
+
+.care-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.72fr);
+  gap: clamp(18px, 3vw, 36px);
+  align-items: stretch;
+}
+
+.care-main,
+.care-side article {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(224, 166, 111, 0.14), transparent 34%),
+    linear-gradient(145deg, rgba(12, 14, 10, 0.94), rgba(2, 3, 2, 0.62));
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.38),
+    0 0 0 1px rgba(241, 223, 191, 0.07);
+  backdrop-filter: blur(12px);
+}
+
+.care-main {
+  min-height: clamp(520px, 44vw, 680px);
+  display: grid;
+  align-content: end;
+  padding: clamp(24px, 4vw, 56px);
+  border-radius: clamp(28px, 4vw, 54px);
+}
+
+.care-main span,
+.care-side span {
+  color: var(--copper-soft);
+  font-size: 0.76rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.care-main h3 {
+  max-width: 760px;
+  margin: 12px 0 0;
+  color: var(--cream);
+  font-size: clamp(2rem, 4.3vw, 5.2rem);
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.care-main ol,
+.care-side ul {
+  display: grid;
+  gap: 12px;
+  margin: clamp(22px, 3vw, 36px) 0 0;
+  padding-left: 1.25rem;
+  color: var(--cream);
+}
+
+.care-main li,
+.care-side li,
+.care-main p,
+.care-side p {
+  color: var(--soft);
+  font-size: clamp(0.96rem, 1.22vw, 1.1rem);
+  line-height: 1.55;
+}
+
+.care-main p {
+  max-width: 850px;
+  margin: clamp(20px, 3vw, 34px) 0 0;
+}
+
+.care-side {
+  display: grid;
+  gap: 16px;
+}
+
+.care-side article {
+  display: grid;
+  align-content: center;
+  min-height: 160px;
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: clamp(22px, 3vw, 34px);
+}
+
+.care-side p {
+  margin: 14px 0 0;
+}
+
 .products {
   padding: clamp(72px, 10vw, 132px) clamp(22px, 7vw, 120px);
   background:
@@ -809,6 +898,10 @@ textarea:focus {
 
   .event-feature {
     grid-column: 1 / -1;
+  }
+
+  .care-layout {
+    grid-template-columns: 1fr;
   }
 
   .product-slide {
@@ -1070,6 +1163,7 @@ textarea:focus {
   .work,
   .collaborators,
   .events,
+  .care,
   .products {
     padding-top: 34px;
     padding-bottom: 42px;
@@ -1125,6 +1219,44 @@ textarea:focus {
   .event-item p {
     font-size: 0.84rem;
     line-height: 1.44;
+  }
+
+  .care-layout {
+    gap: 12px;
+  }
+
+  .care-main {
+    min-height: auto;
+    padding: 22px 16px;
+    border-radius: 22px;
+  }
+
+  .care-main h3 {
+    font-size: clamp(1.65rem, 8vw, 2.55rem);
+  }
+
+  .care-main ol,
+  .care-side ul {
+    gap: 9px;
+    margin-top: 18px;
+  }
+
+  .care-main li,
+  .care-side li,
+  .care-main p,
+  .care-side p {
+    font-size: 0.84rem;
+    line-height: 1.44;
+  }
+
+  .care-side {
+    gap: 10px;
+  }
+
+  .care-side article {
+    min-height: 0;
+    padding: 18px 16px;
+    border-radius: 18px;
   }
 
   .product-stage {
