@@ -1647,7 +1647,11 @@ textarea:focus {
 
   .footer {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+    grid-template-areas:
+      "mail address"
+      "phone instagram"
+      "credit credit";
     gap: 8px 14px;
     padding: 24px 18px 82px;
     text-align: center;
@@ -1672,17 +1676,28 @@ textarea:focus {
   }
 
   .footer a[href^="mailto:"] {
+    grid-area: mail;
     font-size: 0.58rem;
     letter-spacing: 0;
   }
 
+  .footer a[href^="tel:"] {
+    grid-area: phone;
+  }
+
+  .footer a[href*="maurizio_respect"] {
+    grid-area: instagram;
+  }
+
   .footer-address {
+    grid-area: address;
     color: var(--muted);
     white-space: normal;
   }
 
   .powered-by {
     grid-column: 1 / -1;
+    grid-area: credit;
     gap: 5px;
     margin-top: 8px;
   }
