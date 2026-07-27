@@ -982,7 +982,10 @@ textarea:focus {
 .powered-by {
   display: inline-flex;
   align-items: center;
-  gap: 9px;
+  flex-basis: 100%;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 8px;
   color: rgba(241, 223, 191, 0.54);
 }
 
@@ -993,9 +996,9 @@ textarea:focus {
 }
 
 .ros-signature {
-  width: clamp(54px, 5.2vw, 86px);
+  width: clamp(28px, 2.4vw, 42px);
   height: auto;
-  opacity: 0.82;
+  opacity: 0.78;
   filter:
     drop-shadow(0 0 16px rgba(224, 166, 111, 0.12))
     drop-shadow(0 8px 18px rgba(0, 0, 0, 0.42));
@@ -1684,8 +1687,8 @@ textarea:focus {
 
   .powered-by {
     flex-basis: 100%;
-    gap: 7px;
-    margin-top: 2px;
+    gap: 6px;
+    margin-top: 4px;
   }
 
   .powered-by > span {
@@ -1693,7 +1696,7 @@ textarea:focus {
   }
 
   .ros-signature {
-    width: 58px;
+    width: 34px;
   }
 }
 
