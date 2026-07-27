@@ -1646,13 +1646,19 @@ textarea:focus {
   }
 
   .footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px 14px;
-    padding: 22px 18px 86px;
-    text-align: center;
-    font-size: 0.64rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "phone credit"
+      "mail credit"
+      "inst credit"
+      "address address";
+    align-items: center;
+    justify-content: stretch;
+    gap: 7px 18px;
+    padding: 24px 20px 82px;
+    text-align: left;
+    font-size: 0.62rem;
     line-height: 1.35;
   }
 
@@ -1660,7 +1666,7 @@ textarea:focus {
   .footer-address {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 0;
     padding: 0;
     border-radius: 0;
@@ -1672,25 +1678,39 @@ textarea:focus {
     white-space: nowrap;
   }
 
+  .footer a[href^="tel:"] {
+    grid-area: phone;
+  }
+
   .footer a[href^="mailto:"],
-  .footer-address {
-    flex-basis: 100%;
+  .footer-address,
+  .footer a[href*="maurizio_respect"] {
+    flex-basis: auto;
   }
 
   .footer a[href^="mailto:"] {
+    grid-area: mail;
     font-size: 0.58rem;
     letter-spacing: 0;
   }
 
+  .footer a[href*="maurizio_respect"] {
+    grid-area: inst;
+  }
+
   .footer-address {
+    grid-area: address;
     color: var(--muted);
     white-space: normal;
+    justify-content: center;
+    margin-top: 4px;
   }
 
   .powered-by {
-    flex-basis: 100%;
+    grid-area: credit;
     gap: 5px;
-    margin-top: 4px;
+    margin-top: 0;
+    justify-self: end;
   }
 
   .powered-by > span {
