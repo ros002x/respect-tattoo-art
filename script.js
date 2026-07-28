@@ -1,16 +1,16 @@
 const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
-const contactForm = document.querySelector("[data-contact-form]");
-const formNote = document.querySelector("[data-form-note]");
-
-const contactConfig = {
-  whatsappNumber: "393497873009",
-  instagramUrl: "https://www.instagram.com/maurizio_respect/",
-};
+const revealItems = document.querySelectorAll(".reveal, .decor-line");
+const heroFigure = document.querySelector(".hero-figure img");
 
 function syncHeader() {
-  header.classList.toggle("is-scrolled", window.scrollY > 16);
+  header.classList.toggle("is-scrolled", window.scrollY > 18);
+
+  if (heroFigure && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const offset = Math.min(window.scrollY * 0.05, 28);
+    heroFigure.style.transform = `translateY(${offset}px) scale(1.03)`;
+  }
 }
 
 function closeMenu() {
@@ -35,32 +35,19 @@ nav.addEventListener("click", (event) => {
   }
 });
 
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  { threshold: 0.18 },
+);
+
+revealItems.forEach((item) => observer.observe(item));
+
 window.addEventListener("scroll", syncHeader, { passive: true });
 syncHeader();
-
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const data = new FormData(contactForm);
-  const message = [
-    "Ciao Maurizio, vorrei informazioni per un tattoo tribale.",
-    `Nome: ${data.get("nome")}`,
-    `Zona del corpo: ${data.get("zona")}`,
-    `Idea: ${data.get("idea")}`,
-  ].join("\n");
-
-  if (contactConfig.whatsappNumber) {
-    const number = contactConfig.whatsappNumber.replace(/\D/g, "");
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
-    return;
-  }
-
-  navigator.clipboard?.writeText(message).then(
-    () => {
-      formNote.textContent = "Messaggio copiato.";
-    },
-    () => {
-      formNote.textContent = message;
-    },
-  );
-});
