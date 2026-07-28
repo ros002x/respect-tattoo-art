@@ -3,158 +3,314 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Respect Tattoo Art di Maurizio D'Alessandro a Nova Siri. Homepage dark premium ispirata all'arte Maori.">
-    <title>Respect Tattoo Art | Nova Siri</title>
-    <link rel="preload" as="image" href="assets/collab-maurizio.jpg">
+    <meta name="description" content="Respect Tattoo Art di Maurizio D'Alessandro a Nova Siri. Tattoo Maori, Polinesiani, Samoani, Marchesiani e tribali disegnati a mano libera sul corpo.">
+    <title>Respect Tattoo Art | Tribal Tattoo Shop</title>
+    <link rel="preload" as="image" href="assets/jungle-hero.png">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand" href="#home" aria-label="Respect Tattoo Art home">
+    <header class="topbar" data-header>
+      <a class="brand" href="#home" aria-label="Respect Tattoo Art">
         <img class="brand-mark" src="assets/logo.png" alt="">
-        <span class="brand-name">
-          <strong>Respect</strong>
-          <em>Tattoo Art</em>
-        </span>
+        <img class="brand-wordmark" src="assets/respect-wordmark.png" alt="Respect Tattoo Art">
       </a>
-
-      <nav class="main-nav" data-nav aria-label="Navigazione principale">
-        <a href="#studio">Studio</a>
-        <a href="#artisti">Artisti</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#merch">Merch</a>
-        <a href="#guest-artist">Guest Artist</a>
-        <a href="#contatti">Contatti</a>
-      </nav>
-
-      <a class="book-link" href="https://wa.me/393497873009" target="_blank" rel="noopener">
-        Prenota ora <span aria-hidden="true">-></span>
-      </a>
-
       <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" data-menu-toggle>
         <span></span>
         <span></span>
       </button>
+      <nav class="site-nav" data-nav>
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#care">Cura</a>
+        <a href="#products">Prodotti</a>
+        <a href="#artists">Collaboratori</a>
+        <a href="#events">Eventi</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <main>
-      <section class="hero" id="home" aria-label="Respect Tattoo Art">
-        <div class="smoke smoke-a" aria-hidden="true"></div>
-        <div class="smoke smoke-b" aria-hidden="true"></div>
-
-        <aside class="social-rail" aria-label="Contatti rapidi">
-          <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener" aria-label="Instagram">Ig</a>
-          <a href="https://wa.me/393497873009" target="_blank" rel="noopener" aria-label="WhatsApp">Wa</a>
-          <a href="mailto:respecttattoostudio@gmail.com" aria-label="Email">Mail</a>
-        </aside>
-
-        <div class="hero-copy reveal">
+      <section class="hero" id="home">
+        <div class="hero-copy">
           <p class="eyebrow">Tribal tattoo artist / Nova Siri</p>
-          <h1>
-            <span>Arte.</span>
-            <span>Tradizione.</span>
-            <span>Rispetto.</span>
-          </h1>
-          <div class="decor-line" aria-hidden="true"><span></span></div>
-          <a class="text-cta" href="https://wa.me/393497873009" target="_blank" rel="noopener">
-            Prenota il tuo appuntamento <span aria-hidden="true">-></span>
-          </a>
+          <img class="hero-wordmark" src="assets/respect-wordmark.png" alt="Respect Tattoo Art">
+          <p class="shop-line">Tattoo Shop</p>
+          <a class="button" href="https://wa.me/393497873009" target="_blank" rel="noopener">Prenota la tua sessione</a>
         </div>
-
-        <div class="hero-figure" aria-label="Tatuatore al lavoro">
-          <img src="assets/collab-maurizio.jpg" alt="Maurizio D'Alessandro mentre lavora a un tatuaggio">
+        <aside class="hero-profile" aria-label="Maurizio D'Alessandro">
+          <img src="assets/collab-maurizio.jpg" alt="Maurizio D'Alessandro al lavoro">
+          <div class="hero-profile-copy">
+            <span>Maurizio D'Alessandro</span>
+            <p>Artista specializzato in tattoo Maori, Polinesiano, Samoano e Marchesiano. Dopo l'Accademia di Belle Arti di Napoli e una tesi in Antropologia culturale sul tatuaggio, porta da oltre 25 anni ricerca, anatomia e freehand dentro ogni progetto.</p>
+          </div>
+        </aside>
+        <div class="hero-meta">
+          <span>Freehand</span>
+          <span>25+ anni</span>
+          <span>Black tribal</span>
         </div>
-
-        <div class="maori-ghost" aria-hidden="true">
-          <img src="assets/logo.png" alt="">
-        </div>
-
-        <p class="scroll-label">Scroll</p>
       </section>
 
-      <section class="gateway" id="studio" aria-label="Aree principali">
-        <a class="gateway-item reveal" href="#portfolio">
-          <img src="assets/work-back-tribal.jpg" alt="" loading="lazy">
-          <span>01</span>
-          <strong>Portfolio</strong>
-          <em aria-hidden="true">-></em>
-        </a>
-        <a class="gateway-item reveal" href="#artisti">
-          <img src="assets/collab-maurizio.jpg" alt="" loading="lazy">
-          <span>02</span>
-          <strong>Artisti</strong>
-          <em aria-hidden="true">-></em>
-        </a>
-        <a class="gateway-item reveal" href="#guest-artist" id="guest-artist">
-          <img src="assets/collab-sick-ones.jpg" alt="" loading="lazy">
-          <span>03</span>
-          <strong>Guest Artist</strong>
-          <em aria-hidden="true">-></em>
-        </a>
-        <a class="gateway-item reveal" href="#studio-note">
-          <img src="assets/event-workshop.jpg" alt="" loading="lazy">
-          <span>04</span>
-          <strong>Lo Studio</strong>
-          <em aria-hidden="true">-></em>
-        </a>
+      <section class="work" id="work">
+        <div class="work-head">
+          <div>
+            <p class="eyebrow">Il lavoro</p>
+            <h2>Progetti costruiti sul corpo.</h2>
+          </div>
+          <p>Ogni progetto tribale nasce dalla forma muscolare e anatomica. Non e decorazione appoggiata: diventa corazza, identita e presenza.</p>
+        </div>
+        <div class="work-editorial">
+          <article class="work-main work-statement">
+            <img src="assets/progetto-tribale.png" alt="Progetto tribale realizzato sul corpo">
+            <div>
+              <span>Progetto tribale</span>
+              <h3>Diventa la tua corazza.</h3>
+              <p>Ti rende fiero di cio che sei: un uomo, un guerriero.</p>
+              <div class="work-links">
+                <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">@maurizio_respect</a>
+                <a href="https://www.instagram.com/explore/locations/308725266/respect-tattoo-art/" target="_blank" rel="noopener">Respect Tattoo Art</a>
+              </div>
+            </div>
+          </article>
+          <div class="work-gallery-line">
+            <figure>
+              <img src="assets/work-chin-tribal.jpg" alt="Tatuaggio tribale sul mento">
+              <figcaption>Chin tribal</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-leg-japanese.jpg" alt="Tatuaggio su gamba con maschera e serpente">
+              <figcaption>Leg piece</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/maurizio-macko-2.jpg" alt="Tatuaggio tribale su petto e spalla">
+              <figcaption>Chest tribal</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/work-back-tribal.jpg" alt="Tatuaggio tribale sulla schiena">
+              <figcaption>Back piece</figcaption>
+            </figure>
+          </div>
+        </div>
       </section>
 
-      <section class="studio-note reveal" id="studio-note">
-        <p>"Ogni segno ha un significato. Ogni tatuaggio, una storia."</p>
+      <section class="care" id="care">
+        <div class="care-panel">
+          <div class="care-statement">
+            <p class="eyebrow">Cura del tattoo</p>
+            <h2>Il tattoo continua sulla pelle.</h2>
+            <p>La guarigione protegge neri, linee e definizione. La regola e semplice: pulire bene, asciugare senza sfregare, usare poca crema e lasciare respirare.</p>
+            <div class="care-tags">
+              <span>3/4 volte al giorno</span>
+              <span>15/30 giorni</span>
+              <span>Pelle libera</span>
+            </div>
+          </div>
+          <ol class="care-protocol" aria-label="Protocollo di cura del tattoo">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Rimuovi la pellicola</h3>
+                <p>Dopo circa un'ora, con calma, senza tirare o irritare la zona tatuata.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Lava con delicatezza</h3>
+                <p>Mani pulite, sapone neutro e acqua tiepida. Nessuno sfregamento.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Asciuga tamponando</h3>
+                <p>Usa carta assorbente pulita. La pelle deve restare asciutta e calma.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <h3>Crema sottile</h3>
+                <p>Applica pochissimo prodotto. Troppa crema soffoca la pelle e rallenta la guarigione.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="care-limits">
+          <span>No mare o piscina</span>
+          <span>No sole diretto</span>
+          <span>No lampade</span>
+          <span>No tessuti stretti</span>
+          <span>Non staccare le croste</span>
+        </div>
       </section>
 
-      <section class="merch-section" id="merch" aria-labelledby="merch-title">
-        <div class="section-heading reveal">
-          <h2 id="merch-title">Merch</h2>
-          <span aria-hidden="true"></span>
+      <section class="products" id="products">
+        <div class="section-head">
+          <p class="eyebrow">Aftercare</p>
+          <h2>Due rituali, una pelle protetta.</h2>
         </div>
-
-        <div class="merch-grid">
-          <article class="merch-category reveal">
-            <div class="merch-visual apparel">
-              <img src="assets/logo.png" alt="" loading="lazy">
+        <div class="product-stage" aria-label="Prodotti per la cura del tattoo">
+          <article class="product-slide product-slide-summer">
+            <div class="product-copy">
+              <span>Linea sole</span>
+              <h3>Cura estiva.</h3>
+              <p>Per i mesi caldi e le giornate all'aperto: protezione alta, texture leggera e attenzione al nero del tatuaggio quando la pelle e piu esposta.</p>
             </div>
-            <h3>Abbigliamento</h3>
-            <p>Felpe / t-shirt / beanie</p>
-            <a href="#contatti">Scopri <span aria-hidden="true">-></span></a>
+            <img src="assets/product-care-summer.png" alt="Prodotti Tattoo Apple T-SUN per la cura estate">
           </article>
-
-          <article class="merch-category reveal">
-            <div class="merch-visual jewels">
-              <img src="assets/logo.png" alt="" loading="lazy">
+          <article class="product-slide product-slide-general">
+            <div class="product-copy">
+              <span>Routine quotidiana</span>
+              <h3>Cura completa.</h3>
+              <p>T&#8209;FOAM deterge senza aggredire. T&#8209;PANTHENOL calma, protegge e accompagna la pelle nella guarigione quotidiana del tattoo.</p>
             </div>
-            <h3>Gioielli</h3>
-            <p>Collane / anelli / orecchini</p>
-            <a href="#contatti">Scopri <span aria-hidden="true">-></span></a>
-          </article>
-
-          <article class="merch-category reveal">
-            <div class="merch-visual art">
-              <img src="assets/progetto-tribale.png" alt="" loading="lazy">
-            </div>
-            <h3>Arte</h3>
-            <p>Quadri / stampe / opere di Maurizio</p>
-            <a href="#contatti">Scopri <span aria-hidden="true">-></span></a>
+            <img src="assets/product-care-general.png" alt="Prodotti Tattoo Apple T-FOAM e T-PANTHENOL per la cura generale">
           </article>
         </div>
+      </section>
+
+      <section class="collaborators" id="artists">
+        <div class="section-head">
+          <p class="eyebrow">Nel circuito di Maurizio</p>
+          <h2>Collaboratori dello studio.</h2>
+        </div>
+        <div class="artist-carousel" aria-label="Collaboratori dello studio">
+          <div class="artist-track">
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-maurizio.jpg" alt="Maurizio D'Alessandro">
+              <span class="artist-role">Resident</span>
+              <strong>Maurizio D'Alessandro</strong>
+              <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">@maurizio_respect</a>
+            </article>
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-philodinkiostro.jpg" alt="Philodinkiostro">
+              <span class="artist-role">Tattoo artist</span>
+              <strong>Philodinkiostro</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-giamba.jpg" alt="Giamba">
+              <span class="artist-role">Tattoo artist</span>
+              <strong>Giamba</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-sick-ones.jpg" alt="Sick Ones">
+              <span class="artist-role">Collaboratore</span>
+              <strong>Sick Ones</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-lori-bufano.jpg" alt="Lori Bufano">
+              <span class="artist-role">Collaboratrice</span>
+              <strong>Lori Bufano</strong>
+              <span>Collaboratrice</span>
+            </article>
+            <article class="artist-card artist-poster">
+              <img src="assets/collab-mattia-lost.jpg" alt="Mattia Lost">
+              <span class="artist-role">Collaboratore</span>
+              <strong>Mattia Lost</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-maurizio.jpg" alt="">
+              <span class="artist-role">Resident</span>
+              <strong>Maurizio D'Alessandro</strong>
+              <span>@maurizio_respect</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-philodinkiostro.jpg" alt="">
+              <span class="artist-role">Tattoo artist</span>
+              <strong>Philodinkiostro</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-giamba.jpg" alt="">
+              <span class="artist-role">Tattoo artist</span>
+              <strong>Giamba</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-sick-ones.jpg" alt="">
+              <span class="artist-role">Collaboratore</span>
+              <strong>Sick Ones</strong>
+              <span>Collaboratore</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-lori-bufano.jpg" alt="">
+              <span class="artist-role">Collaboratrice</span>
+              <strong>Lori Bufano</strong>
+              <span>Collaboratrice</span>
+            </article>
+            <article class="artist-card artist-poster" aria-hidden="true">
+              <img src="assets/collab-mattia-lost.jpg" alt="">
+              <span class="artist-role">Collaboratore</span>
+              <strong>Mattia Lost</strong>
+              <span>Collaboratore</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="events" id="events">
+        <div class="section-head">
+          <p class="eyebrow">Eventi</p>
+          <h2>Collaborazioni e appuntamenti fuori studio.</h2>
+        </div>
+        <div class="event-list">
+          <article class="event-feature">
+            <img src="assets/event-macko-collab.png" alt="Maurizio D'Alessandro da Macko Tattoo Shops">
+            <div>
+              <span>Macko Tattoo Shops</span>
+              <h3>Macko collab.</h3>
+              <p>Un rapporto professionale che porta Maurizio fuori da Nova Siri per guest spot, appuntamenti dedicati e progetti tribali su richiesta.</p>
+            </div>
+          </article>
+          <article class="event-item">
+            <span>Bari</span>
+            <h3>Macko Bari</h3>
+            <p>Sessioni guest e progetti programmati fuori studio.</p>
+          </article>
+          <article class="event-item">
+            <span>Roma</span>
+            <h3>Macko Roma</h3>
+            <p>Appuntamenti periodici per chi segue Maurizio nel circuito Macko.</p>
+          </article>
+          <article class="event-item">
+            <span>Nova Siri</span>
+            <h3>Respect Tattoo Art</h3>
+            <p>Studio principale per consulenze, progetti freehand e percorsi completi.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="booking" id="booking">
+        <div class="booking-copy">
+          <p class="eyebrow">Booking</p>
+          <h2>Prenota una consulenza.</h2>
+          <p>Scrivi zona del corpo, dimensione indicativa e idea. Maurizio valuta il progetto e ti risponde con il percorso piu adatto.</p>
+        </div>
+        <form class="contact-form" data-contact-form>
+          <input type="text" name="nome" autocomplete="name" placeholder="Nome" required>
+          <input type="text" name="zona" placeholder="Zona del corpo" required>
+          <textarea name="idea" rows="4" placeholder="Idea tattoo" required></textarea>
+          <button class="button" type="submit">Apri WhatsApp</button>
+          <p class="form-note" data-form-note></p>
+        </form>
       </section>
     </main>
 
-    <footer class="site-footer" id="contatti">
-      <img class="footer-mark" src="assets/logo.png" alt="">
-      <p>Ogni segno ha un significato.<br>Ogni tatuaggio, una storia.</p>
-      <nav aria-label="Contatti studio">
-        <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/393497873009" target="_blank" rel="noopener">WhatsApp</a>
-        <a href="mailto:respecttattoostudio@gmail.com">Email</a>
-        <span>Via Pietro Nenni, 23 - Nova Siri Scalo MT</span>
-        <a href="#contatti">Privacy Policy</a>
-      </nav>
+    <footer class="footer" id="contact">
+      <a href="tel:+393497873009">+39 349 787 3009</a>
+      <a href="mailto:respecttattoostudio@gmail.com">respecttattoostudio@gmail.com</a>
+      <a href="https://www.instagram.com/maurizio_respect/" target="_blank" rel="noopener">@maurizio_respect</a>
+      <span class="footer-address">Via Pietro Nenni, 23 - Nova Siri Scalo MT</span>
       <a class="powered-by" href="https://www.instagram.com/333ros.exe?igsh=YWQzMWFpcmpoZjF4&utm_source=qr" target="_blank" rel="noopener" aria-label="Powered by RoS">
         <span>Powered by</span>
-        <img src="assets/ros-signature.png" alt="RoS">
+        <img class="ros-signature" src="assets/ros-signature.png" alt="RoS">
       </a>
-      <small>Copyright 2026 Respect Tattoo Art. All rights reserved.</small>
     </footer>
 
     <script src="script.js"></script>
