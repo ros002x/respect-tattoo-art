@@ -466,19 +466,11 @@ h2 {
 }
 
 .artist-track {
-  --artist-gap: clamp(14px, 2vw, 24px);
   display: flex;
   width: max-content;
-  gap: 0;
+  gap: clamp(14px, 2vw, 24px);
   animation: artists-loop 48s linear infinite;
   will-change: transform;
-}
-
-.artist-loop-set {
-  display: flex;
-  flex: 0 0 auto;
-  gap: var(--artist-gap);
-  padding-right: var(--artist-gap);
 }
 
 .artist-card {
@@ -1547,7 +1539,7 @@ textarea:focus {
   }
 
   .artist-track {
-    --artist-gap: 12px;
+    gap: 12px;
     animation-duration: 12s;
   }
 
