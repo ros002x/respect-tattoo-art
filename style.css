@@ -1789,6 +1789,6 @@ textarea:focus {
 
 @media (orientation: landscape) and (max-width: 1400px), (orientation: landscape) and (pointer: coarse), (orientation: landscape) and (hover: none) {
   .artist-track {
-    animation-duration: 12s !important;
+    animation-duration: 6s !important;
   }
 }
