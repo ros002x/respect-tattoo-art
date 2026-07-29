@@ -9,6 +9,41 @@ const contactConfig = {
   instagramUrl: "https://www.instagram.com/maurizio_respect/",
 };
 
+function setupArtistCarousel() {
+  const track = document.querySelector(".artist-track");
+
+  if (!track || track.dataset.seamless === "true") return;
+
+  const originalCards = Array.from(track.querySelectorAll(".artist-card:not([aria-hidden='true'])"));
+
+  if (!originalCards.length) return;
+
+  const createSet = (hidden = false) => {
+    const set = document.createElement("div");
+    set.className = "artist-loop-set";
+
+    originalCards.forEach((card) => {
+      const clone = card.cloneNode(true);
+
+      if (hidden) {
+        clone.setAttribute("aria-hidden", "true");
+        clone.querySelectorAll("a").forEach((link) => {
+          link.tabIndex = -1;
+        });
+      }
+
+      set.appendChild(clone);
+    });
+
+    return set;
+  };
+
+  track.replaceChildren(createSet(false), createSet(true));
+  track.dataset.seamless = "true";
+}
+
+setupArtistCarousel();
+
 function syncHeader() {
   header.classList.toggle("is-scrolled", window.scrollY > 16);
 }
