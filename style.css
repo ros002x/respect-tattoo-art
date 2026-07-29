@@ -562,7 +562,7 @@ h2 {
   }
 
   to {
-    transform: translateX(calc(-50% - 9px));
+    transform: translateX(-50%);
   }
 }
 
@@ -1781,14 +1781,14 @@ textarea:focus {
   }
 }
 
-@media (max-width: 1180px), (pointer: coarse) {
+@media (max-width: 1180px), (pointer: coarse), (hover: none) {
   .artist-track {
-    animation-duration: 12s;
+    animation-duration: 12s !important;
   }
 }
 
-@media (orientation: landscape) and (pointer: coarse) {
+@media (orientation: landscape) and (max-width: 1400px), (orientation: landscape) and (pointer: coarse), (orientation: landscape) and (hover: none) {
   .artist-track {
-    animation-duration: 12s;
+    animation-duration: 12s !important;
   }
 }
