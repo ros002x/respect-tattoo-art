@@ -469,7 +469,7 @@ h2 {
   display: flex;
   width: max-content;
   gap: clamp(14px, 2vw, 24px);
-  animation: artists-loop 48s linear infinite;
+  animation: artists-loop 96s linear infinite;
   will-change: transform;
 }
 
@@ -1783,6 +1783,12 @@ textarea:focus {
 
 @media (max-width: 1180px), (pointer: coarse) {
   .artist-track {
-    animation-duration: 6s;
+    animation-duration: 12s;
+  }
+}
+
+@media (orientation: landscape) and (pointer: coarse) {
+  .artist-track {
+    animation-duration: 12s;
   }
 }
